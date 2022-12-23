@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>slider img</title>
+    <!-- carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/slider_img.css" type="text/css">
+
+    <!-- font a -->
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+
+</head>
+<body>
+    <section>
+        <div class="fadeOut owl-carousel owl-theme">
+            <div class="item">
+              <img src="images/sliger_img-1.jpg" alt="sliger_img-1">
+            </div>
+            <div class="item">
+              <img src="images/sliger_img-2.jpg" alt="sliger_img-2">
+            </div>
+            <div class="item">
+              <img src="images/sliger_img-3.jpg" alt="sliger_img-3">
+            </div>
+            <div class="item">
+              <img src="images/sliger_img-4.jpg" alt="sliger_img-4">
+            </div>
+            <div class="item">
+              <img src="images/sliger_img-5.jpg" alt="sliger_img-5">
+            </div>
+          </div>
+    </section>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+              $('.fadeOut').owlCarousel({
+                items: 1,
+                animateOut: 'fadeOut',
+                loop: true,
+                margin: 10,
+              });
+            });
+    </script>
+
+    <!-- ............. -->
+
+    <section class="profile">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="profile_img">
+            <img src="images/driver-003.jpg" alt="driver-003">
+          </div>
+          <div class="des">
+            <h5>poojan patel</h5>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="des_2">
+            <h6>city:</h6>
+            <span>surat</span>
+            <h6>skill:</h6>
+            <span>html</span>
+            <h6>laptop:</h6>
+            <span>hp</span>
+          </div>
+        </div>
+        <div class="item">
+          <h4>2</h4>
+        </div>
+        <div class="item">
+          <h4>3</h4>
+        </div>
+        <div class="item">
+          <h4>4</h4>
+        </div>
+        <div class="item">
+          <h4>5</h4>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(document).ready(function() {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        })
+      })
+    </script>
+
+
+</body>
+</html>

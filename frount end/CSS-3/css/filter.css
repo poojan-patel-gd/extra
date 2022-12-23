@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 45px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 20px 0;
+}
+h3{
+    font-size: 32px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 20px 0;
+}
+.box{
+    width: 700px;
+    height: auto;
+    background-color: aqua;
+    margin: 50px auto;
+}
+.box img{
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+
+/* property */
+
+.blur:hover img{
+    filter: blur(2px);
+    transition: all 0.5s;
+}
+
+.brightness:hover img{
+    filter: brightness(1.5);
+}
+
+.contrust:hover img{
+    filter: contrast(1.5);
+}
+
+.saturate:hover img{
+    filter: saturate(1.5);
+}
+
+.sepia:hover img{
+    filter: sepia(1.5);
+}
+
+.grayscale:hover img{
+    filter: grayscale(1.5);
+}
+
+.hue_rotate:hover img{
+    filter: hue-rotate(180deg);
+}
+
+.opacity:hover img{
+    filter: opacity(0.2);
+}
+
+.drop_shadow:hover img{
+    filter: drop-shadow(5px 5px 5px rgba(25, 187, 223, 0.5));
+}

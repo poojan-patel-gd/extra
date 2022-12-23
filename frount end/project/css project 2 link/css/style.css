@@ -1,0 +1,1195 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    padding: 0;
+}
+:root{
+    --primery-color:#D9842F;
+    --bg-color: #f1e7df;
+    --bg-secondary-color:#f0f0f0;
+    --header_na-color: #141414;
+    --header-font-color: #333333;
+    --font-color:#ffffff;
+    --secondary-font-color:#666666;
+    --border-color:#D9842F;
+    --white-color:#ffffff;
+    --black-color: #000;
+    --temp-color: #ADD8E6;
+    --Service-boder-color: #f7f7f7;
+    --btn-hover-color: #995d2170;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+.justify-content-space-evenly{
+    justify-content: space-evenly; 
+}
+.align-items-center{
+    align-items: center;
+}
+.py_100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+body{
+    font-size: 16px;
+    color: var(--black-color);
+    font-weight: 400;
+    font-family: 'Roboto';
+    background-color: var(--white-color);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+.conteiner{
+    width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;   
+}
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* header */
+.bg_img{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url('../images/img-71.webp');
+    background-size: cover;
+    position: relative;
+}
+header{
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: absolute;
+    z-index: 1;
+}
+nav{
+    margin-left: auto;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0px 19px;
+    padding: 20px 0px;
+}
+nav ul li a{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--font-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+}
+.new_nav a i{
+    font-size: 27px;
+    color: var(--font-color);
+    margin-left: 40px;
+}
+.header_btn a{
+    display: block;
+    font-size: 18px;
+    font-family: 'Squada One';
+    text-transform: uppercase;
+    color: var(--font-color);
+    padding: 25px 45px;
+    margin-left: 50px;
+    background-color: var(--primery-color);
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 var(--primery-color);
+    transition: ease-out 0.5s;
+}
+.header_btn a:hover{
+    box-shadow: inset 200px 0 0 0 var(--btn-hover-color);
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown_menu{
+    position: absolute;
+    display: block;
+    max-width: 220px;
+    min-width: 180px;
+    border-top: 6px solid var(--primery-color);
+    margin-top: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.dropdown:hover .dropdown_menu{
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown_menu i{
+    color: var(--primery-color);
+    position: absolute;
+    width: 100%;
+    top: -15px;
+}
+.dropdown_menu a{
+    display: block;
+    font-size: 12px;
+    color: var(--font-color);
+    background-color: var(--header-font-color);
+    padding: 20px 30px;
+    box-shadow: inset 0 0 0 0 var(--primery-color);
+    transition: ease-out 0.5s;
+    text-align: center;
+} 
+.dropdown_menu a:hover{
+    box-shadow: inset 180px 0 0 0 var(--primery-color);
+}
+
+/* main */
+
+/* haircut & shaves */
+.haircut_shaves{
+    width:100%;
+    display: flex;
+}
+.haircut_shaves_content{
+    width:60%;
+    text-align: center;
+    margin:auto;
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.haircut_shaves_content img{
+    margin-bottom: 70px;
+}
+.haircut_shaves_content h1{
+    color: var(--font-color);
+    font-family: 'Squada One';
+    font-size: 55px;
+    text-transform:uppercase ;
+    margin-bottom: 40px;
+}
+.haircut_shaves_content p{
+    color: var(--font-color);
+    margin-bottom: 70px;
+    line-height: 1.5;
+}
+.book_btn a{
+    font-size: 18px;
+    color: var(--font-color);
+    text-decoration: none;
+    font-family: 'Squada One';
+    text-transform: uppercase;
+    background-color: var(--primery-color);
+    padding: 20px 40px;
+    box-shadow: inset 0 0 0 0 var(--primery-color);
+    transition: ease-out 0.5s;
+}
+.book_btn a:hover{
+    box-shadow: inset 200px 0 0 0 var(--btn-hover-color);
+}
+
+/* Service */
+
+.service{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s;
+}
+.beard_mustache{
+    flex-basis: 20%;
+    box-shadow: 1px 1px 10px 4px var(--Service-boder-color);
+    padding: 28px 18px;
+    text-align: center;
+}
+.beard_mustache img{
+    width: 77.19px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.beard_mustache span{
+    font-size: 28px;
+    font-family: 'Squada One';
+    line-height: 1;
+    display: block;
+    margin-bottom: 15px;
+}
+.beard_mustache p{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.beard_mustache:hover{
+    box-shadow: 1px 1px 10px 1px var(--primery-color);
+}
+
+.man_facials{
+    flex-basis: 20%;
+    box-shadow: 1px 1px 10px 4px var(--Service-boder-color);
+    padding: 28px 18px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.man_facials img{
+    width: 77.19px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.man_facials span{
+    font-size: 28px;
+    font-family: 'Squada One';
+    line-height: 1;
+    display: block;
+    margin-bottom: 15px;
+}
+.man_facials p{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.man_facials:hover{
+    box-shadow: 1px 1px 10px 1px var(--primery-color);
+}
+
+.exceptional_haircut{
+    flex-basis: 20%;
+    box-shadow: 1px 1px 10px 4px var(--Service-boder-color);
+    padding: 28px 18px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.exceptional_haircut img{
+    width: 77.19px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.exceptional_haircut span{
+    font-size: 28px;
+    font-family: 'Squada One';
+    line-height: 1;
+    display: block;
+    margin-bottom: 15px;
+}
+.exceptional_haircut p{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.exceptional_haircut:hover{
+    box-shadow: 1px 1px 10px 1px var(--primery-color);
+}
+
+.scissor_cut{
+    flex-basis: 20%;
+    box-shadow: 1px 1px 10px 4px var(--Service-boder-color);
+    padding: 28px 18px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.scissor_cut img{
+    width: 77.19px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.scissor_cut span{
+    font-size: 28px;
+    font-family: 'Squada One';
+    line-height: 1;
+    display: block;
+    margin-bottom: 15px;
+}
+.scissor_cut p{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.scissor_cut:hover{
+    box-shadow: 1px 1px 10px 1px var(--primery-color);
+}
+
+/* about us */
+
+.about_us{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-right: 380px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url('../images/about\ us\ bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about_us_img{
+    flex-basis: 100%;
+    flex-basis: 100%;
+}
+.about_us_img img{
+    width: 30%;
+    flex-wrap: wrap;
+    margin-right: 15px;
+}
+.about_us_des{
+    flex-basis: 100%;
+}
+.about_us_des span{
+    font-size: 13px;
+    font-family: 'Squada One';
+    color: var(--primery-color);
+    display: block;
+    position: absolute;
+    top: 29%;
+    right: 44%;
+}
+.about_us_des h2{
+    font-size: 50px;
+    font-family: 'Squada One';
+    color: var(--font-color);
+    line-height: 1;
+    position: absolute;
+    top: 31%;
+    right: 12%;
+}
+.about_us_des p{
+    font-size: 12.5px;
+    font-family: 'Roboto';
+    color: var(--font-color);
+    font-weight: 300;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    right: 17%;
+    animation-delay: 0.15s;
+}
+.about_us_btn a{
+    font-size: 18px;
+    font-family: 'Squada One';
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 15px 25px;
+    background-color: var(--primery-color);
+    line-height: 1;
+    position: absolute;
+    top: 66%;
+    right: 40%;
+    box-shadow: inset 0 0 0 0 var(--primery-color);
+    transition: ease-out 0.5s;
+}
+.about_us_btn a:hover{
+    box-shadow: inset 200px 0 0 0 var(--btn-hover-color);
+}
+
+/* working hour  */
+
+.working_hours_body{
+    background: var(--bg-color);
+}
+.working_hours{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--white-color);
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 30px;
+}
+.working_hours_img{
+    flex-basis: 60%;
+    width: 665px;
+    width: 455px;
+    text-align: center;
+}
+.working_hours_img span{
+    padding: 40px 40px;
+    border-radius: 50%;
+    border:1px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 285px;
+    top: 32%;
+}
+.working_hours_img span i{
+    font-size: 19px;
+    color: var(--font-color);
+    text-align: center;
+    padding: 25px 25px;
+    border-radius: 50%;
+    background-color: var(--primery-color);
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+.working_hours_img h2{
+    font-size: 35px;
+    font-family: 'Squada One';
+    color: var(--font-color);
+    line-height: 1;
+    position: absolute;
+    top: 55%;
+    left: 13%;
+}
+.working_hours_des{
+    flex-basis: 40%;
+    padding: 70px 90px;
+    line-height: 1;
+}
+.working_hours_des span{
+    font-size: 15px;
+    font-family: 'Squada One';
+    color: var(--primery-color);
+    display: block;
+    margin:10px 0;
+}
+.working_hours_des h4{
+    font-size: 32px;
+    font-family: 'Squada One';
+    color: var(--header-font-color);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.working_hours_des ul li{
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: var(--black-color);
+    list-style: none;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+.working_hours_des ul hr{
+    width: 100%;
+    opacity: 30%;
+}
+
+/* contact us */
+
+.our_barber{
+    width: 100%;
+    position: relative;
+    line-height: 1;
+    background-color: var(--white-color);
+}
+.contact_us{
+    width: 60%;
+    position: absolute;
+    background-image: url('../images/img-36.webp');
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    top: -170px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 37px;
+}
+.contact_us_email{
+    flex-basis: 30%;
+    padding: 25px 25px;
+    margin: 0 15px;
+    background-color: var(--white-color);
+}
+.contact_us_email i{
+    font-size: 16px;
+    color: var(--primery-color);
+}
+.contact_us_email a{
+    font-size: 17px;
+    font-family: 'Squada One';
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.contact_us_location{
+    flex-basis: 30%;
+    padding: 25px 25px;
+    margin: 0 15px;
+    background-color: var(--white-color);
+}
+.contact_us_location i{
+    font-size: 16px;
+    color: var(--primery-color);
+}
+.contact_us_location span{
+    font-size: 17px;
+    font-family: 'Squada One';
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.contact_us_number{
+    flex-basis: 30%;
+    padding: 25px 25px;
+    margin: 0 15px;
+    background-color: var(--white-color);
+}
+.contact_us_number i{
+    font-size: 16px;
+    color: var(--primery-color);
+}
+.contact_us_number a{
+    font-size: 17px;
+    font-family: 'Squada One';
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+/* our barber */
+
+.title{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.title h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Squada One';
+    color: var(--header-font-color);
+    margin-bottom: 15px;
+}
+.title span{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--primery-color);
+    margin-bottom: 15px;
+    display: block;
+}
+.title h6 span:first-child{
+    width: 100px;
+    height: 1px;
+    background-image: linear-gradient(to right, #eaeff2, #e0e5e8, #d6dbdf, #ccd1d5, #c2c7cc);
+    display: inline-block;
+    vertical-align: middle; 
+}
+.title h6 i{
+    font-size: 16px;
+    transform: rotate(270deg);
+    opacity: 70%;
+    margin: 0 10px;
+}
+.title h6 span:last-child{
+    width: 100px;
+    height: 1px;
+    background-image: linear-gradient(to right, #c2c7cc, #ccd1d5, #d6dbdf, #e0e5e8, #eaeff2);
+    display: inline-block;
+    vertical-align: middle; 
+}
+.barbers{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 100px;
+}
+.barber_1{
+    position: relative;
+    display: block;
+    box-shadow: inset 0 0 0 0 var(--primery-color);
+}
+.barber_1 img{
+    width: 350px;
+    height: 458px;
+}
+.barber_1_des{
+    width: 350px;
+    background-color: var(--header-font-color);
+    position: absolute;
+    bottom: -13%;
+    padding: 20px 20px;
+    transition: ease-out 0.5s;
+}
+.barber_2{
+    width: 350px;
+    position: relative;
+}
+.barber_2 img{
+    width: 350px;
+    height: 458px;
+}
+.barber_2_des{
+    width: 350px;
+    background-color: var(--header-font-color);
+    position: absolute;
+    bottom: -13%;
+    padding: 20px 20px;
+    transition: ease-out 0.5s;
+}
+.barber_3{
+    width: 350px;
+    position: relative;
+}
+.barber_3 img{
+    width: 350px;
+    height: 458px;
+}
+.barber_3_des{
+    width: 350px;
+    background-color: var(--header-font-color);
+    position: absolute;
+    bottom: -13%;
+    padding: 20px 20px;
+    transition: ease-out 0.5s;
+}
+.barbers h3{
+    font-size: 28px;
+    color: var(--white-color);
+    font-weight: 400;
+    font-family: 'Squada One';
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+.barbers span{
+    font-size: 15px;
+    color: var(--Service-boder-color);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    display: block;
+}
+.barbers i{
+    font-size: 14px;
+    color: var(--black-color);
+    padding: 15px 15px;
+    background-color: var(--white-color);
+    display: inline-block;
+    transition: all 0.5s;
+}
+.barbers i:hover{
+    background-color: var(--black-color);
+    color: var(--font-color);
+}
+.barber_1:hover .barber_1_des{
+    background-color: var(--primery-color);
+    bottom: 0;
+}
+.barber_2:hover .barber_2_des{
+    background-color: var(--primery-color);
+    bottom: 0;
+}
+.barber_3:hover .barber_3_des{
+    background-color: var(--primery-color);
+    bottom: 0;
+}
+
+/* gallery photos */
+
+.album{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 100px;
+}
+.left_img{
+    position: absolute;
+    left: 0;
+}
+.right_img{
+    position: absolute;
+    right: 0;
+}
+
+/* pricr table */
+
+.price_table{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pricelist_1{
+    flex-basis: 30%;
+    text-align: center;
+    border: 2px solid var(--primery-color);
+    margin: 0 17px;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+}
+.pricelist_1:hover{ 
+    box-shadow: 1px 1px 20px 1px var(--header-font-color);
+}
+.pricelist_2{
+    flex-basis: 30%;
+    text-align: center;
+    border: 2px solid var(--primery-color);
+    margin: 0 17px;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+}
+.pricelist_2:hover{ 
+    box-shadow: 1px 1px 20px 1px var(--header-font-color);
+}
+.pricelist_3{
+    flex-basis: 30%;
+    text-align: center;
+    border: 2px solid var(--primery-color);
+    margin: 0 17px;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+}
+.pricelist_3:hover{ 
+    box-shadow: 1px 1px 20px 1px var(--header-font-color);
+}
+.pricelist_1 img{
+    width: 90px;
+    padding: 10px 10px;
+    background-color: var(--primery-color);
+    border: 2px solid var(--black-color);
+    border-radius: 50%;
+    margin: 60px 0 20px;
+}
+.pricelist_1 h4{
+    font-size: 30px;
+    font-family: 'Squada One';
+    color: var(--header_na-color);
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.pricelist_1 h6{
+    font-size: 20px;
+    font-family: 'Squada One';
+    color: var(--header-font-color);
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+}
+.pricelist_1 span{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    display: block;
+    margin-bottom: 10px;
+}
+.pricelist_1 h5{
+    font-size: 28px;
+    font-family: 'Squada One';
+    color: var(--primery-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.pricelist_1 i{
+    font-size: 18px;
+    opacity: 50%;
+}
+
+.pricelist_2 img{
+    width: 90px;
+    padding: 10px 10px;
+    background-color: var(--primery-color);
+    border: 2px solid var(--black-color);
+    border-radius: 50%;
+    margin: 60px 0 20px;
+}
+.pricelist_2 h4{
+    font-size: 30px;
+    font-family: 'Squada One';
+    color: var(--header_na-color);
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.pricelist_2 h6{
+    font-size: 20px;
+    font-family: 'Squada One';
+    color: var(--header-font-color);
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+}
+.pricelist_2 span{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    display: block;
+    margin-bottom: 10px;
+}
+.pricelist_2 h5{
+    font-size: 28px;
+    font-family: 'Squada One';
+    color: var(--primery-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.pricelist_2 i{
+    font-size: 18px;
+    opacity: 50%;
+}
+
+.pricelist_3 img{
+    width: 90px;
+    padding: 10px 10px;
+    background-color: var(--primery-color);
+    border: 2px solid var(--black-color);
+    border-radius: 50%;
+    margin: 60px 0 20px;
+}
+.pricelist_3 h4{
+    font-size: 30px;
+    font-family: 'Squada One';
+    color: var(--header_na-color);
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.pricelist_3 h6{
+    font-size: 20px;
+    font-family: 'Squada One';
+    color: var(--header-font-color);
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+}
+.pricelist_3 span{
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: var(--secondary-font-color);
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    display: block;
+    margin-bottom: 10px;
+}
+.pricelist_3 h5{
+    font-size: 28px;
+    font-family: 'Squada One';
+    color: var(--primery-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.pricelist_3 i{
+    font-size: 18px;
+    opacity: 50%;
+}
+
+/* ClIENT REWIE */
+
+.client_rewie{
+    background-image: url('../images/img-48.webp');
+    background-size: cover;
+    height: 590px;
+}
+.client_rewie .title h2{
+    color: var(--font-color);
+    padding-top: 110px;
+}
+.client_rewie .title h6 i{
+    color: var(--font-color);
+}
+.rewie{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.rewie_img i{
+    font-size: 50px;
+    position: absolute;
+    top: -4%;
+    right: 2%;
+    color: var(--font-color);
+}
+.rewie_img{
+    position: absolute;
+    left: 5%;
+    width: 15vw;
+}
+.rewie_des{
+    position: absolute;
+    right: -30%;
+    width: 50vw;
+}
+.rewie_des span{
+    font-size: 19px;
+    color: var(--font-color);
+    position: absolute;
+    top: 58px;
+}
+.rewie_des h4{
+    font-size: 30px;
+    color: var(--primery-color);
+    font-family: 'Squada One';
+    font-weight: 400;
+    position: absolute;
+    bottom: -156px;
+}
+.rewie_des h6{
+    font-size: 13px;
+    color: var(--font-color);
+    opacity: 50%;
+    font-weight: 300;
+    position: absolute;
+    bottom: -181px;
+}
+.arrow{
+    position: absolute;
+    right: 20%;
+}
+.arrow i:first-child{
+    font-size: 18px;
+    color: var(--header-font-color);
+    opacity: 200%;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--font-color);
+    background-color: transparent;
+    transition: all 0.5s;
+}
+.arrow i:first-child:hover{
+    color: var(--font-color);
+    background-color: var(--primery-color);
+    border: none;
+}
+.arrow i:last-child{
+    font-size: 20px;
+    color: var(--font-color);
+    padding: 17px;
+    border-radius: 50%;
+    background-color: var(--primery-color);
+}
+
+/* blogs & news */
+
+.blogs_news{
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+}
+.blogs_1{
+    position: absolute;
+    top: 100%;
+    left: 45%;
+}
+.blogs_2{
+    position: absolute;
+    top: 450%;
+    left: 55%;
+    transform: translate(-50%);
+}
+.blogs_1 .blogs_des{
+    background-color: var(--Service-boder-color);
+    width: 30vw;
+    position: absolute;
+    right: 0;
+    padding: 70px;
+}
+.blogs_des h4{
+    text-transform: uppercase;
+    color: var(--primery-color);
+    font-family: 'Squada One';
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 70px;
+}
+.blogs_des h2{
+    font-size: 40px;
+    font-family: 'Squada One';
+    font-weight: 600;
+    color: var(--header-font-color);
+}
+.blogs_des .book_btn{
+    margin: 50px 0;
+    margin-bottom: 37px;
+}
+.blogs_1 .blogs_img{
+    position: absolute;
+    left: 0;
+    padding-bottom: 25px;
+}
+
+.blogs_2 .blogs_des{
+    background-color: var(--Service-boder-color);
+    width: 30vw;
+    position: absolute;
+    padding: 70px;
+}
+.blogs_des h4{
+    text-transform: uppercase;
+    color: var(--primery-color);
+    font-family: 'Squada One';
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 70px;
+}
+.blogs_des h2{
+    font-size: 40px;
+    font-family: 'Squada One';
+    font-weight: 600;
+    color: var(--header-font-color);
+}
+.blogs_des .book_btn{
+    margin: 50px 0;
+    margin-bottom: 37px;
+}
+.blogs_2 .blogs_img{
+    position: absolute;
+    right: -20%;
+}
+
+/* Footer */
+
+.footer_bg{
+    background-image: url('../images/pattern.png');
+    background-size: cover;
+    min-height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    bottom: -790%;
+}
+.about_shop{
+    padding: 70px;
+    width: 30vw;
+}
+.about_shop img{
+    padding-bottom: 20px;
+}
+.about_shop p{
+    color: var(--font-color);
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 50%;
+    padding-bottom: 20px;
+}
+.email_send{
+    flex-basis: 45%;
+}
+.email_send input{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.arrow_btn{
+    position: absolute;
+    left: 38%;
+    bottom: 32.3%;
+}
+.arrow_btn{
+    background-color: var(--primery-color);
+    padding: 18.5px;
+    -webkit-appearance: button;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.arrow_btn i{
+    font-size: 16px;
+    padding: 2.5px;
+    font-weight: 900;
+    color: var(--white-color);
+}
+.arrow_btn:hover{
+    background-color: var(--header-font-color);
+}
+
+.useful_links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-right: 80px;
+}
+.useful_links ul li:first-child{
+    font-size: 25px;
+    font-family: 'Squada One';
+    color: var(--font-color);
+    display: block;
+    padding-bottom: 20px;
+}
+.useful_links ul li{
+    list-style:none;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--font-color);
+    padding: 5px;
+}
+.useful_links ul li i{
+    font-size: 9px;
+    color: var(--font-color);
+    margin-right: 8px;
+}
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.contact ul li:first-child{
+    font-size: 25px;
+    font-family: 'Squada One';
+    color: var(--font-color);
+    display: block;
+    padding-bottom: 20px;
+}
+.contact ul li:last-child{
+    font-size: 16px;
+    color: var(--font-color);
+    opacity: 50%;
+    display: block;
+    padding-top: 20px;
+}
+.contact ul li{
+    list-style:none;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--font-color);
+    padding: 5px;
+}
+.contact ul li i{
+    font-size: 9px;
+    color: var(--font-color);
+    margin-right: 8px;
+}
+.powered_by h5{
+    font-size: 20px;
+    margin:auto;
+    color: var(--primery-color);
+    font-family: 'Squada One';
+    font-weight: 300;
+    background-color: var(--black-color);
+    position: absolute;
+    bottom: -787%;
+    left: 50%;
+    transform: translate(-50%);
+}

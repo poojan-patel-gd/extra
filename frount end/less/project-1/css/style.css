@@ -1,0 +1,595 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: #fdfbf9;
+}
+.align-items-center {
+  align-items: center;
+  justify-content: space-between;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+.tital {
+  font-size: 36px;
+  color: #000;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.py-100 {
+  padding: 100px 0;
+}
+.container {
+  width: 1140px;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+header {
+  background-color: #fbf3e4;
+}
+header .petuk-main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 0;
+}
+header .petuk-main .petuk-logo {
+  flex-basis: 20%;
+}
+header .petuk-main .petuk-logo img {
+  max-width: 50%;
+}
+header .petuk-main nav {
+  align-items: center;
+  flex-basis: 60%;
+}
+header .petuk-main nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header .petuk-main nav ul li {
+  list-style: none;
+  padding: 0 5px;
+  padding: 15px;
+}
+header .petuk-main nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffa101;
+}
+.header-des {
+  flex-basis: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-des .header-contact {
+  width: 60%;
+  border-right: 2px solid #ffa101;
+}
+.header-des .header-contact span {
+  font-size: 16px;
+  color: #666a71;
+}
+.header-des .header-contact a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffa101;
+}
+.header-des .header-search {
+  width: 30%;
+  text-align: center;
+}
+.header-des .header-search a {
+  font-size: 16px;
+  text-decoration: none;
+}
+.header-des .header-search i {
+  color: #666a71;
+  margin-top: 13px;
+  padding-right: 5px;
+}
+.slider {
+  background-color: #fbf3e4;
+}
+.pizaa-bg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.pizaa-bg::after {
+  background-image: url('../images/line.svg');
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 47%;
+}
+.pizz-con {
+  width: 50%;
+}
+.pizz-con .fast {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 161, 1, 0.3);
+  padding: 8px 8px 0;
+  font-size: 16px;
+  align-items: center;
+}
+.pizz-con .fast i {
+  color: #ffa101;
+  padding-right: 10px;
+}
+.pizz-con .fast h6 {
+  color: #666a71;
+}
+.pizz-con h1 {
+  font-size: 64px;
+  padding-top: 20px;
+}
+.pizz-con h1 span {
+  color: #ffa101;
+}
+.pizz-con p {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.pizz-con .apk-dow {
+  margin-top: 20px;
+}
+.pizz-con .apk-dow a {
+  text-decoration: none;
+  padding: 15px 25px;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+}
+.pizz-con .apk-dow a:hover {
+  background-color: #ffa101;
+}
+.pizz-img {
+  width: 50%;
+}
+.pizza-of .tital {
+  text-align: center;
+}
+.pizza-of .row {
+  justify-content: space-between;
+}
+.pizza-of .row .card {
+  flex-basis: 23%;
+  text-align: center;
+}
+.pizza-of .row .card img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.pizza-of .row .card h4 {
+  font-size: 25px;
+  color: #666a71;
+  margin-bottom: 10px;
+}
+.pizza-of .row .card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.pizza-of .row .card span {
+  font-size: 20px;
+  color: #ffa101;
+  margin-bottom: 10px;
+}
+.pizza-of .row .card .quonty {
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+.pizza-of .row .card .quonty i {
+  color: #666a71;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ffa101;
+}
+.pizza-of .row .card a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 25px;
+  background-color: #ffa101;
+  transition: all 0.5s ease;
+  border-radius: 25px;
+}
+.pizza-of .row .card a:hover {
+  background-color: #000;
+}
+.discount .discount-baner {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fbf3e4;
+  padding: 15px 0;
+  justify-content: center;
+  display: flex;
+  border-radius: 15px;
+  border: 1px dashed #ffa101;
+  margin-bottom: 100px;
+}
+.discount .discount-baner i {
+  font-size: 22px;
+  color: #ffa101;
+  padding-right: 5px;
+}
+.discount .discount-baner h4 {
+  font-size: 22px;
+  color: #ffa101;
+  padding-right: 5px;
+}
+.discount .discount-baner span {
+  font-size: 16px;
+  line-height: 23px;
+  color: #4f576a;
+  font-weight: 700;
+}
+.discount .discount-card {
+  flex-basis: 49%;
+  width: 100%;
+  height: 350px;
+  background-color: #fbf3e4;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px dashed #ffa101;
+}
+.discount .discount-card .discount-card-img img {
+  width: 80%;
+  position: absolute;
+  right: -70px;
+  top: -15%;
+}
+.discount .discount-card .discount-card-des {
+  position: absolute;
+  bottom: 15%;
+  padding: 0 15px;
+}
+.discount .discount-card .discount-card-des h2 {
+  font-size: 30px;
+}
+.discount .discount-card .discount-card-des h2 span {
+  color: #ffa101;
+  font-size: 30px;
+}
+.discount .discount-card .discount-card-des span {
+  font-size: 16px;
+  color: #666a71;
+}
+.nearby-pizza-offer .tital {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.nearby-pizza-offer .tital h2 {
+  flex-basis: 50%;
+  display: inline-block;
+}
+.nearby-pizza-offer .tital a {
+  flex-basis: 9%;
+  font-size: 16px;
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+  color: #ffa101;
+  padding-right: 10px;
+  border-radius: 25px;
+}
+.nearby-pizza-offer .tital a i {
+  margin-left: 10px;
+}
+.nearby-pizza-offer .neatby-offer-card {
+  flex-basis: 23%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-img img {
+  max-width: 100%;
+  display: block;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des {
+  background-color: #fff;
+  padding: 10px 10px;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des h4 {
+  font-size: 22px;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des span {
+  font-size: 13px;
+  color: #666a71;
+  padding-bottom: 15px;
+  display: block;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des .reating span {
+  display: flex;
+  justify-content: space-between;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des .reating span p {
+  font-size: 16px;
+  color: #000;
+}
+.nearby-pizza-offer .neatby-offer-card .neatby-offer-card-des .reating span span {
+  color: #ffa101;
+  font-size: 16px;
+}
+.fresh-pizza-delivered {
+  text-align: center;
+}
+.fresh-pizza-delivered .fresh-pizza-delivered-card {
+  flex-basis: 33.33%;
+  background-color: #fff;
+  padding: 30px 10px;
+}
+.fresh-pizza-delivered .fresh-pizza-delivered-card h4 {
+  font-size: 25px;
+  padding: 15px 0;
+}
+.fresh-pizza-delivered .fresh-pizza-delivered-card p {
+  font-size: 16px;
+  color: #666a71;
+}
+.fastest-delivery .fastest-delivery-img {
+  flex-basis: 50%;
+}
+.fastest-delivery .fastest-delivery-img img {
+  width: 100%;
+}
+.fastest-delivery .fastest-delivery-des {
+  flex-basis: 50%;
+}
+.fastest-delivery .fastest-delivery-des .fastest-delivery-con {
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.fastest-delivery .fastest-delivery-des .fastest-delivery-con .fastest-delivery-des-icon i {
+  font-size: 50px;
+  color: #ffa101;
+  margin-right: 15px;
+}
+.fastest-delivery .fastest-delivery-des .fastest-delivery-con .fastest-delivery-des-con h4 {
+  font-size: 22px;
+}
+.fastest-delivery .fastest-delivery-des .fastest-delivery-con .fastest-delivery-des-con p {
+  font-size: 16px;
+  color: #666a71;
+}
+.black {
+  background-color: #000;
+  padding: 50px 0;
+}
+.black .tital img {
+  position: absolute;
+  left: 82%;
+  max-width: 25%;
+}
+.black .tital h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.black .tital p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.black .tital a {
+  font-size: 16px;
+  padding: 15px 25px;
+  background-color: #ffa101;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+  border-radius: 25px;
+}
+.black .tital a:hover {
+  background-color: #666a71;
+}
+.we-hate-late .tital h2 {
+  text-align: left;
+}
+.we-hate-late .we-hate-late-des {
+  flex-basis: 50%;
+}
+.we-hate-late .we-hate-late-des p {
+  width: 70%;
+  padding: 12px 0;
+  font-size: 15px;
+  color: #666a71;
+}
+.we-hate-late .we-hate-late-des .point {
+  display: flex;
+  padding: 10px 0;
+}
+.we-hate-late .we-hate-late-des .point span {
+  color: #0cbe85;
+  padding-right: 10px;
+}
+.we-hate-late .we-hate-late-des .point p {
+  padding: 0;
+  font-size: 15px;
+}
+.latest-news {
+  background-color: #fbf3e4;
+}
+.latest-news a {
+  padding: 10px 25px;
+  background-color: #ffa101;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+.latest-news a i {
+  color: #fff;
+  padding-right: 5px;
+}
+.latest-news a:hover {
+  background-color: #666a71;
+}
+.latest-news .news-card {
+  position: relative;
+  flex-basis: 23%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.latest-news .news-card .news-card-img img {
+  width: 100%;
+}
+.latest-news .news-card .news-card-des {
+  position: absolute;
+  bottom: 5%;
+  padding: 20px;
+}
+.latest-news .news-card .news-card-des .news-card-des-name {
+  display: flex;
+  padding: 20px 0;
+}
+.latest-news .news-card .news-card-des .news-card-des-name img {
+  max-width: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.latest-news .news-card .news-card-des .news-card-des-name span {
+  font-size: 16px;
+  color: #fff;
+}
+.latest-news .news-card .news-card-des h4 {
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 8px;
+}
+.latest-news .news-card .news-card-des a {
+  color: #fff;
+  padding: 3px 15px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+.latest-news .news-card .news-card-des a:hover {
+  background-color: #ffa101;
+  border: 1px solid #ffa101;
+}
+.join-as-partner .join-as-partner-card {
+  text-align: center;
+  flex-basis: 48%;
+  position: relative;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 15px;
+}
+.join-as-partner .join-as-partner-card .card-icon {
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  transform: translate(-50%);
+}
+.join-as-partner .join-as-partner-card .card-icon i {
+  font-size: 50px;
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #ffa101;
+}
+.join-as-partner .join-as-partner-card h4 {
+  font-size: 30px;
+  padding: 20px;
+}
+.join-as-partner .join-as-partner-card p {
+  width: 80%;
+  margin: 0 auto;
+}
+.join-as-partner .join-as-partner-card a {
+  padding: 10px 25px;
+  background-color: #ffa101;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 30px;
+  display: inline-block;
+}
+.join-as-partner .join-as-partner-card a i {
+  margin-right: 5px;
+}
+.brand .brand-logo {
+  display: flex;
+  width: 100%;
+}
+.brand .brand-logo .brand-icon {
+  flex-basis: 23%;
+}
+.brand .brand-logo .brand-icon img {
+  width: 100%;
+}
+.subscribe .subscribe-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  background-color: #fbf3e4;
+  border: 1px dashed #ffa101;
+  padding: 50px;
+  border-radius: 25px;
+}
+.subscribe .subscribe-card .subscribe-des {
+  padding: 50px;
+}
+.subscribe .subscribe-card .subscribe-des h4 {
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+.subscribe .subscribe-card .subscribe-des p {
+  font-size: 16px;
+  color: #666a71;
+}
+.subscribe .subscribe-card .subscribe-des .subscribe-btn {
+  margin-top: 20px;
+}
+.subscribe .subscribe-card .subscribe-des .subscribe-btn input {
+  width: 40%;
+  height: 50px;
+  border: 1px solid #ffa101;
+}
+.subscribe .subscribe-card .subscribe-des .subscribe-btn a {
+  padding: 16px 25px;
+  background-color: #ffa101;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.subscribe .subscribe-card .subscribe-des .subscribe-btn a:hover {
+  background-color: #666a71;
+}
+footer {
+  background-color: #fff;
+}

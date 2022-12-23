@@ -1,0 +1,2521 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color : #edc831;
+    --secondary-color : #343434;
+    --secondary-var-color : #47443f;
+    --white-color : #fff;
+    --bg-color : rgb(235, 235, 235);
+    --border-color: #d9d9d9;
+    --gray-color:#818181;
+    --black-color:#000;
+}
+ul, ol{
+    padding: 0;
+}
+body{
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+body::-webkit-scrollbar{
+    background-color: var(--secondary-var-color);
+    border: 2px double var(--black-color);
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 25px;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    position: fixed;
+    z-index: 98;
+}
+.loader img{
+    width: 80%;
+    /* max-height: 100%; */
+    z-index: 99;
+    background-size: cover;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-item-center{
+    align-items: center;
+}
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.navigationbar{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+.container{
+    width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.nav-detail{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7px 0px;
+    background-color: var(--primary-color);
+}
+.nav-detail .navigation-mail a{
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--secondary-color);
+}
+.navigation-mail .navigation-mail a i{
+    vertical-align: middle;
+    font-size: 16px;
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+.navigation-mail a:hover{
+    color: var(--white-color);
+}
+.navigation-time span{
+    font-weight: 500;
+    font-size: 16px;
+}
+.social-media-icon ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.toggle-menu{
+    display: none;
+}
+
+.social-media-icon ul li{
+    list-style: none;
+}
+.social-media-icon ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+}
+.social-media-icon ul li a i{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 50%;
+    line-height: 28px;
+    transition: all 0.3s;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+.social-media-icon ul li a i:hover{
+      background-color:var(--white-color);
+    color: var(--primary-color);
+}
+.header-contain{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}   
+.header-logo{
+    flex-basis: 25%;  
+}
+.header-menu{
+    flex-basis: 50%;
+}
+.header-call{
+    position: relative;
+    flex-basis: 25%;
+}
+.header-call i{
+    transition: all 1s;
+}
+.header-call i:hover{
+    transform: rotate(10deg);
+}
+.header-menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-menu ul li{
+    display: block;
+    padding-left: 12px;
+    text-decoration: none;
+}
+.header-menu ul li.active a{
+    color: var(--primary-color);
+}
+.header-menu ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px;
+    color: var(--secondary-color);
+}
+.header-call i{
+    position: absolute;
+    top: 50%;
+    font-size: 36px;
+    padding-right: 10px;
+    color: var(--primary-color);
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+.header-call span{
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 2px;
+    right: 25%;
+    bottom: 10%;
+    text-transform: uppercase;
+    color: var(--gray-color);
+}
+.header-call h4{
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    right: 10%;
+}
+.header-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0px 5fpx 10px rgba(0 , 0 , 0 , 0.5);
+    z-index: 9;
+}
+
+/* side up */
+
+.side-up{
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9;
+    border-radius: 50%;
+    animation: sideup 1s ease-in infinite;
+}
+@keyframes sideup{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.side-up img{
+    width: 50px;
+    z-index: 11;
+}
+
+/* slider */
+
+.slider-bg .item{
+    max-height: 800px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.slider-bg .owl-carousel .owl-dots{
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.slider-bg .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid #000;
+}
+.slider-bg .owl-carousel button.owl-dot.active{
+    background-color: #000;
+}
+.slider-bg{
+    position: relative;
+}
+.car-img{
+    position: absolute;
+    top: 50%;
+    max-width: 100%;
+    height: 100%;
+    transform: scale(125%) translateX(47%) translateY(-2%);
+
+}
+.slider-form{
+    flex-basis: 33%;
+}
+.form-title h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    padding: 40px;
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(254,254,96,1) 0%, rgb(192, 160, 32) 100%);
+}
+.form-body{
+    padding: 50px;
+    background-color: var(--white-color);
+    height: auto;
+    display: block;
+    border: none;
+}
+.form-input{
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+    font-size:10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 15px 20px 15px 50px;
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+}
+.form-submit{
+    width: 100%;
+    padding: 15px 20px;
+    font-size:10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border: none;
+} 
+
+/* vehicle */
+
+.vehicle-contain{
+    display: block;
+    width: 100%;
+}
+.vehicle .owl-carousel .item img{
+    display: none;
+}
+.vehicle .owl-carousel .owl-nav{
+    display: none;
+}
+.vehicle .owl-carousel .owl-dots{
+    display: none;
+}
+.vehicle-title{
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.title-img{
+    animation: logo-ani 1s ease-in infinite;
+}
+@keyframes logo-ani {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.title-con h2{
+    text-transform: uppercase;
+    font-size: 58px;
+    letter-spacing: 8px;
+    line-height: 1;
+}
+.title-con span{
+    display: block;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+.car-types{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.car-images{
+    flex-basis: 32%;
+    text-align: center;
+    padding: 35px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    transition: all 0.5s;
+}
+.car-images:hover{
+    box-shadow: 0px 0px 15px var(--secondary-color);
+}
+.car-parts h6{
+    font-size: 16px;
+    padding: 10px 0px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* taxi app */
+
+.taxi-app{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url('../images/taxi-bg2-images.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.app-contain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.app-con{
+    flex-basis: 60%; 
+}
+.app-view{
+    flex-basis: 40%;
+}
+.app-view img{
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    max-width: 44%;
+}
+.app-con h5{
+    color: var(--primary-color);
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px 0px;
+}
+.app-con h2{
+    color: var(--white-color);
+    font-size: 54px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.app-con p{
+    color: var(--gray-color);
+    letter-spacing: 0px;
+    padding: 20px 0px 20px;
+}
+.app-con .booking{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.app-con .booking h4{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+    padding-left: 20px;
+}
+.app-con .booking .bulb{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--white-color);
+    border-radius: 50%;
+}
+.app-con .booking i{
+    display: inline-block;
+    color: var(--primary-color);
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.android-btn{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.android-btn .play-btn{
+    flex-basis: 32.5%;
+    border: 1px solid var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+.android-btn .play-btn:last-child .app-icon i{
+    font-size: 36px;
+    padding: 8px 0px 0px 8px;
+    color: var(--white-color);
+}
+.app-icon{
+    flex-basis: 20%;
+}
+.app-icon img{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+.app-name{
+    flex-basis: 70%;
+}
+.app-name h3{
+    line-height: 0.8;
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+.app-name span{
+    color: var(--border-color);
+    line-height: 1;
+    font-size: 8px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+/* benefits */
+
+.main-benefits{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+}
+.benefits-title{
+    text-align: center;
+    display: block;
+}
+.benefits-title h6{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+.benefits-title h2{
+    font-size: 58px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: var(--secondary-color);
+}
+.benefits-con{
+    margin: 100px 0px 0px 0px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bene-taxi{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.bene-taxi img{
+    max-width: 25%;
+    padding-bottom: 50px;
+}
+
+.benefits{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.benefits-point-right{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+.benefits-con .benefits:nth-child(2){
+    top: 58%;
+    left: 0%;
+}
+.benefits-con .benefits:nth-child(3){
+    top: 84%;
+    left: 5%;
+}
+.benefits-con .benefits-point-right:nth-child(5){
+    top: 58%;
+    right: 0;
+}
+.benefits-con .benefits-point-right:nth-child(6){
+    top: 84%;
+    right: 5%;
+}
+
+.bene-offer{
+    text-align: right;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.benefits-point-right .bene-offer{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bene-offer-con{
+    flex-basis: 82%;
+}
+.bene-offer-icon{
+    flex-basis: 13%;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.benefits-point-right .bene-offer-icon{
+    flex-basis: 13%;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.bene-offer i{
+    padding-top: 12px;
+    font-size: 24px;
+}
+
+.bene-offer-con{
+    flex-basis: 80%;
+    padding-top: 20px;
+}
+.bene-offer-con h3{
+    letter-spacing: 0;
+    font-weight: 400;
+}
+.bene-offer-con p{
+    letter-spacing: 0;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+.line-1{
+    width: 400px;
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    transform: rotate(44.5deg);
+    left: 33%;
+    top: 62%;
+    z-index: -1;
+}
+.line-2{
+    width: 400px;
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    transform: rotate(-44.5deg);
+    left: 32%;
+    top: 62%;
+    z-index: -1;
+}
+.line-3{
+    width: 400px;
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    left: 32%;
+    top: 63%;
+    z-index: -1;
+}
+
+/* news latter */
+
+.news-latter-bg{
+    background-image:linear-gradient(rgba(237,200,49,0.8),rgba(237,200,49,0.8)), url('../images/yellow-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    transform: scale(100%);
+    display: flex;
+    align-items: center;
+}
+.newu-latter {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+.news-name{
+    flex-basis: 22%;
+}
+.news-name h4{
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.news-name h3{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+.news-email{
+    flex-basis: 48%;
+}
+.news-email input{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+}
+.sub-btn{
+    flex-basis: 25%;
+}
+.sub-btn input{
+    padding: 25px;
+    background-color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--white-color);
+    letter-spacing: 3px;
+    outline: none;
+    border: transparent;
+    border-radius: 3px;
+}
+
+/* driver */
+
+.driver-section{
+    background-color:var(--bg-color);
+}
+.driver-title{
+    text-align: center;
+    margin: 0 auto;
+    display: block;   
+    width: 100%;
+    padding-bottom: 50px;
+}
+.driver-title h5{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.driver-title h2{
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+.driver-menu{
+    width: 100%;
+}
+.driver-menu ul{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+.driver-menu ul li{
+    display: block;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+.driver-menu ul li a{
+    text-decoration: none;
+    color: var(--black-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+.driver-menu ul li.active a{
+    background-color: var(--primary-color);
+}
+
+.driver-section .row{
+    width: 100%;
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.driver-profile{
+    flex-basis: 19%;
+    margin-left: 15px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.driver-profile:hover{
+    box-shadow: 1px 1px 50px var(--gray-color);
+}
+.driver-profile img{
+    width: 100%;
+}
+.driver-profile-contain{
+    text-align: center;
+    padding: 40px;
+    border-bottom: 2px solid var(--border-color);
+    background-color: var(--white-color);
+}
+.driver-profile-contain h5{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+.driver-profile-contain .profile-star ul li{
+    text-decoration: none;
+    display: block;
+}
+.profile-star ul li i{
+    color: var(--primary-color);
+    font-size: 10px;
+    line-height: 0;
+}
+.driver-skill{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    padding:30px 15px;
+    background-color: var(--white-color);
+    justify-content: space-between;
+}
+.driver-skill .g-city{
+    flex-basis: 30%;
+    text-align: center;
+}
+.g-city h6{
+    font-weight: 900;
+    line-height: 1;
+}
+.g-city span{
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--gray-color);
+    line-height: 0;
+}
+.driver-section .item{
+    max-width: 100%;
+    max-height: 700px;
+}
+.driver-section .owl-nav{
+    display: none;
+}
+.driver-section .owl-carousel .owl-dots{
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.driver-section .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.driver-section .owl-carousel button.owl-dot.active{
+    background-color: #000;
+}
+
+/* advert */
+
+.advert-section{
+    padding-top: 100px;
+    position: relative;
+}                        
+.main-advert{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.advert-contain{
+    flex-basis: 30%;
+    padding-bottom: 50px;
+}
+.advert-contain h5{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.advert-contain h2{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+.advert-contain p{
+    color: var(--gray-color);
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: 'Cabin Condensed';
+}
+
+.advert-contain .advert_1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+.advert-contain .advert_1:last-child{
+    border-bottom:none;
+}
+.advert_1 h5{
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 15px;
+}
+.advert_1 h4{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    padding-top: 8px;
+    line-height: 1;
+    font-family: 'Cabin Condensed';
+}
+.advert-btn{
+    margin-top: 50px;
+}
+.advert-btn a{
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 3px;
+    background-color:var(--secondary-color);
+}
+.advert-img{
+    flex-basis: 65%;
+}
+.advert-img img{
+    max-width: 113%;
+}
+
+/* hco */
+
+.hoc-bg{
+    background-image:linear-gradient(rgba(60,60,60,0.95),rgba(60,60,60,0.95)), url('../images/Yellow_cabs_04.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.stoks{
+    width: 100%;
+    display: flex;
+    padding: 0px 16%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stoks .clients{
+    flex-basis: 28%;
+    text-align: center;
+}
+.clients h4{
+    color: var(--white-color);
+    font-size: 32px;
+    letter-spacing: 8px;
+    text-align: center;
+    line-height: 1;
+}
+.clients span{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Cabin Condensed';
+    color: var(--gray-color);
+}
+
+/* news & faq */
+
+.news-faq-section{
+    background-color: var(--bg-color);
+}
+
+.n-f-title{
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.n-f-title h5{
+    color: var(--primary-color);
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+.n-f-title h3{
+    color: var(--secondary-color);
+    font-size: 44px;
+    letter-spacing: 10px;
+    line-height: 1;
+}
+
+.n-f-contain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 8%;
+    justify-content: space-between;
+}
+.faq-box{
+    flex-basis: 50%;
+}
+.faq-title{
+    background-color: var(--white-color);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8px;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    cursor: pointer;
+}
+.faq-title .mainus{
+    flex-basis: 10%;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 7px 0px;
+    box-shadow: 1px 1px 3px var(--secondary-color); 
+}
+.faq-title .mainus a{
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--white-color);
+}
+.fa-plus{
+    display: none;
+}
+.faq-title .faq-con{
+    flex-basis: 90%;
+}
+.faq-title .faq-con h6{
+    font-size: 9px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    padding: 0px 25px;
+}
+.faq-slide-down{
+    background-color: var(--white-color);
+    margin-top: 1.5px;
+    padding: 20px 10px 20px 80px;
+    display: none;
+}
+.faq-slide-down p{
+    font-size: 12px;
+    color: var(--gray-color);
+    line-height: 1.5;
+}
+.n-f-img-1{
+    flex-basis: 22%;
+    display: block;
+    height: 100%;
+    transition: all 0.5s;
+}
+.n-f-img-1:hover{
+    box-shadow: 1px 1px 15px var(--secondary-color);
+}
+.n-f-img-1 .images-01{
+    width: 100%;
+    margin-top: 8px;
+}
+.n-f-img-1 .images-01 img{
+    width: 100%;
+}
+
+.n-f-img-1 .images-01-con{
+    background-color: var(--white-color);
+    padding: 20px;
+}
+.images-01-con span{
+    color: var(--primary-color);
+    font-size: 9px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+.images-01-con p{
+    color: var(--gray-color);
+    font-size: 10px;
+    padding-top: 8px;
+}
+
+/* property */
+
+.property-title{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.property-title h5{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+.property-title h3{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 10px;
+    line-height: 1;
+}
+.property-title p{
+    font-size: 12px;
+    padding: 20px;
+    font-weight: 600;
+    color: var(--gray-color);
+}
+.property-title p span{
+    color: var(--primary-color);
+    font-weight: 800;
+}
+.property-contain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 8%;
+    margin-top: 50px;
+}
+.pro-01{
+    flex-basis: 30%;
+}
+.pro-cricle{
+    background-image:linear-gradient(rgba(60,60,60,0.8),rgba(60,60,60,0.8)), url('../images/taxi-man-1.jpg');
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 70px 50px;
+    transition: all 1s;
+    margin: 0 auto;
+}
+.pro-cricle:hover{
+    transform: rotate(360deg);
+    box-shadow: 5px 5px 20px var(--black-color);
+}
+.pro-cricle h3{
+    font-size: 48px;
+    color: var(--primary-color);
+    line-height: 1;
+}
+.pro-cricle span{
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--border-color);
+    text-transform: uppercase;
+}
+.pro-cricle p{
+    color: var(--white-color);
+    letter-spacing: 1px;
+    line-height: 1;
+    font-family: 'Cabin Condensed';
+    padding-top: 10px;
+}
+
+/* testimonials */
+
+.testimonials{
+    background-image:linear-gradient(rgba(237,200,49,0.9),rgba(237,200,49,0.9)), url('../images/man-expre.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.test-title{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.test-title h2{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 1;
+}
+.test-title h5{
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.test-contain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 70px;
+    justify-content: space-between;
+}
+.t-con-1{
+    flex-basis: 45%;
+    background-color: var(--white-color);
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+.t-con-1 img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(50%);
+    top: -50%;
+}
+
+.t-con-1 h4{
+    font-size: 14px;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+.t-con-1 span{
+    color: var(--gray-color);
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.t-con-1 p{
+    color: var(--gray-color);
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.scroll-cr{
+    display: block;
+    margin: 0 auto;
+}
+.scroll-cr ul li{
+    display: block;
+    text-decoration: none;
+}
+.scroll-cr ul li i{
+    font-size: 5px;
+    padding: 7px;
+    color: var(--border-color);
+}
+.scroll-cr ul li i:first-child{
+    color: var(--white-color);
+}
+
+/* customer */
+
+.customer-contain{
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.customer-des{
+    padding-top: 100px;
+    flex-basis: 40%;
+}
+.customer-des img{
+    margin-bottom: 30px;
+}
+.customer-des p{
+    color: var(--gray-color);
+    font-size: 12px;
+}
+.company-logo{
+    flex-basis: 60%;
+}
+.company-logo img{
+    max-width: 100%;
+}
+
+/* footer */
+            
+.footer-section{
+    background-image:linear-gradient(rgba(60,60,60,0.95),rgba(60,60,60,0.95)), url('../images/road-to-discovery\ \(1\).jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;   
+}
+.footer-contain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.f-app{
+    flex-basis: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+.f-app h3{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--white-color);
+    padding-bottom: 10px;
+}
+.f-app span{
+    color: var(--gray-color);
+    font-size: 12px;
+    font-weight: 600;
+}
+.f-app-icon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 22%;
+}
+.f-app-icon .f-icons{
+    height: 50px;
+    width: 50px;
+    border: 1px solid var(--white-color);
+    border-radius: 3px;
+    margin: 30px 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.f-icons:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px white;
+}
+.f-icons i{
+    color: var(--white-color);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.f-app input{
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-top: 30px;
+    width: 80%;
+    transition: all 0.5s;
+    color: var(--primary-color);
+}
+.f-app input:hover{
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+.f-app h6{
+    color: var(--gray-color);
+    font-size: 12px;
+    padding-top: 15px;
+}
+.f-app h6 i{
+    padding-right: 5px;
+}
+.f-app span i{
+    padding-right: 5px;
+}
+.f-app h5{
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+.f-app h5 i{
+    color: var(--white-color);
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+
+/* copy right */
+
+.copyright{
+    width: 100%;
+}
+.copyright-contain{
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+.c-social-icon{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.c-social-icon ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
+.c-social-icon ul li {
+    display: block;
+    text-decoration: none;
+}
+.c-social-icon ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+}
+.c-social-icon ul li a i{
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 50%;
+    line-height: 28px;
+    transition: all 0.3s;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    color: var(--secondary-color);
+    transition: all 0.5s;
+}
+.c-social-icon ul li a i:hover{
+    box-shadow: 1px 1px 5px var(--black-color);
+}
+.copyright-name{
+    display: block;
+}
+.copyright-name h4{
+    font-size: 12px;
+    color: var(--gray-color);
+}
+.copyright-name h4 i{
+    text-shadow: 1px 1px 4px var(--black-color);
+    color: var(--primary-color);
+}  
+
+
+
+
+
+
+/* media quary */
+/* media quary */
+/* media quary */
+/* media quary */
+
+
+
+
+
+
+
+@media (min-width: 1400px)
+{
+    .container{
+        width: 1320px;
+    }
+    .line-1{
+        width: 550px;
+        transform: rotate(35deg);
+        top: 60%;
+        left: 28.5%;
+    }
+    .line-2{
+        width: 550px;
+        transform: rotate(-35deg);
+        top: 60%;
+        left: 30%;
+    }
+    .line-3{
+        width: 550px;
+        top: 62%;
+        left: 29%;
+    }
+}
+@media (min-width:1200px) and (max-width:1399px) 
+{
+    .container{
+        width: 1140px;
+    }    
+}
+@media (min-width:992px) and (max-width:1199px) 
+{
+    .container{
+        width: 960px;
+    }    
+    .header-logo{
+        flex-basis: 20%;
+    }
+    .header-logo img{
+        max-width: 80%;
+    }                      
+    .app-con {
+        flex-basis: 55%;
+    }
+    .app-con h5{
+        font-size: 16px;
+    }
+    .app-con h2{
+        font-size: 52px;
+    }
+    .app-con p{
+        font-size: 14px;
+    }
+    .android-btn .play-btn{
+        padding-top: 2px;
+    }
+    .play-btn .app-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .android-btn .play-btn:last-child .app-icon i{
+        font-size: 26px;
+    }
+    .app-name h3{
+        font-size: 14px;
+    }
+    .app-view img{
+        max-width: 55%;
+        right: 0%;
+    }                       
+    .benefits-title h6{
+        font-size: 16px;
+    }
+    .benefits-title h2{
+        font-size: 46px;
+    }
+    .bene-taxi img{
+        z-index: 3;
+        max-width: 20%;
+    }
+    .bene-offer-con {
+        flex-basis: 70%;
+    }
+    .bene-offer{
+        width: 100%;
+    }
+    .benefits{
+        left: 0%;
+    }
+    .benefits-point-right{
+        right: 0%;
+    }
+    .benefits-con .benefits:nth-child(2){
+        left: 0;
+    }
+    .benefits-con .benefits:nth-child(3){
+        left: 0;
+    }
+    .benefits-con .benefits-point-right:nth-child(5){
+        right: 0;
+    }
+    .benefits-con .benefits-point-right:nth-child(6){
+        right: 0;
+    }
+    .line-1{
+        display: none;
+    }
+    .line-2{
+        display: none;
+    }
+    .line-3{
+        display: none;
+    }
+     .news-latter-bg{
+        height: auto;
+    }
+    .newu-latter{
+        padding: 0px ;
+    }
+    .news-name h4{
+        font-size: 14px;
+    }
+    .news-name h3{
+        font-size: 24px;
+    }
+    .driver-profile-contain{
+        padding: 30px;
+    }
+    .driver-skill{
+        padding: 30px 5px;
+        height: 85px;
+    }
+    .driver-skill .g-city{
+        flex-basis: 33.33%;
+    }
+    .advert-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .advert-contain{
+        flex-basis: 40%;
+    }
+    .advert-img{
+        flex-basis: 60%;
+    }
+    .advert-img img{
+        padding-top: 100px;
+    }
+    .f-app-icon .f-icons{
+        height: 43px;
+        width: 43px;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px) 
+{
+    .container{
+        width: 720px;
+    }    
+
+    .navigationbar .social-media-icon{
+        display: none;
+    }
+
+    .header-logo{
+        flex-basis: 20%;
+    }
+    .header-logo img{
+        max-width: 150px;
+    }
+    .header-call{
+        display: none;
+    }
+    .toggle-menu{
+        position: relative;
+    }
+    .header-menu{
+        position: absolute;
+        top: 30%;
+        width: 50%;
+        right: 6%;
+        background-color: white;
+        box-shadow: 0px 0px 10px black;
+        display: none;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+    .header-menu ul {
+        display: block;
+    }
+    .header-logo{
+        flex-basis: 90%;
+    }
+    .toggle-menu{
+        flex-basis: 10%;
+        margin: 0 auto;
+        display: block;
+    }
+    .toggle-menu i{
+        font-size: 26px; 
+        color: var(--primary-color);       
+    }
+    .vehicle-contain{
+    display: none;
+    }
+    .vehicle .owl-carousel .item img{
+    max-width: 100%;
+    display: block;
+    }
+    .vehicle .owl-carousel .owl-nav{
+    display: none;
+    }
+    .vehicle .owl-carousel .owl-dots{
+    display: none;
+    }
+    .app-con {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .app-con h5{
+        font-size: 16px;
+    }
+    .app-con h2{
+        font-size: 52px;
+    }
+    .app-con p{
+        font-size: 14px;
+    }
+    .android-btn{
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .android-btn .play-btn{
+        padding-top: 2px;
+        flex-basis: 25%;
+    }
+    .play-btn .app-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .android-btn .play-btn:last-child .app-icon i{
+        font-size: 26px;
+    }
+    .app-name h3{
+        font-size: 14px;
+    }
+    .app-view {
+       display: none;
+    }                     
+     .benefits-title h6{
+        font-size: 16px;
+    }
+    .benefits-title h2{
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+    .main-benefits{
+        height: 150vh;
+    }
+    .benefits{
+        display: block;
+    }
+    .line-1{
+        display: none;
+    }
+    .line-2{
+        display: none;
+    }
+    .line-3{
+        display: none;
+    }
+    .bene-taxi img{
+        opacity: 0.1;
+        max-width: 50%;
+        padding-top: 80px;
+    }
+    .benefits{
+        margin: 0 auto;
+        width: 80%;
+        top: 20%;
+    }
+    .benefits-point-right{
+        margin: 0 auto;
+        width: 80%;
+        top: 65%;
+        right: 0;
+    }
+    .benefits-con .benefits:nth-child(2){
+        top: 80%;
+        left: 5%;        
+    }
+    .benefits-con .benefits:nth-child(3){
+        top: 50%
+    }
+    .benefits-con .benefits-point-right:nth-child(5){
+        top: 35%;
+    }
+    .benefits-con .benefits-point-right:nth-child(6){
+        top: 95%;
+        right: 0;
+    }
+    .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .bene-offer-icon{
+        flex-basis: 9%;
+    }
+    .benefits-point-right .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .benefits-point-right .bene-offer-icon{
+        flex-basis: 9%;
+    }
+    .news-latter-bg{
+        height: auto;
+        padding: 20px;
+    }
+    .newu-latter{
+        padding: 0px ;
+    }
+    .news-name h4{
+        font-size: 14px;
+    }
+    .news-name h3{
+        font-size: 24px;
+    }
+    .news-name{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email input{
+        width: 50%;
+        padding: 20px;
+    }
+    .sub-btn{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .sub-btn input{
+        width: 30%;
+        padding: 15px 20px;
+    }
+    .driver-menu ul li{
+        margin: 0px 0px;
+    }
+    .driver-profile-contain{
+        padding: 30px;
+    }
+    .driver-skill{
+        padding: 30px 5px;
+        height: 85px;
+    }
+    .driver-skill .g-city{
+        flex-basis: 33.33%;
+    }
+    .advert-contain{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .advert-img{
+        flex-basis: 100%;
+    }
+    .advert-img img{
+        width: 90%;
+    }
+    .advert-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .faq{
+        flex-basis: 100%;
+    }
+    .buy-your-taxi{
+        margin-top: 50px;
+        flex-basis: 48%;
+    }
+    .property-contain .pro-01:last-child{
+        margin: 0 auto;
+    }
+    .pro-cricle{
+        width: 230px;
+        height: 230px;
+    }
+    .test-title{
+        margin-bottom: 50px;
+    }
+    .test-contain .t-con-1 img{
+        top: -30%;
+        width: 70px;
+        height: 70px;
+        box-shadow: 0px 0px 10px var(--black-color);
+    }
+    .customer-des{
+        flex-basis: 100%;
+    }
+    .company-logo{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer-section{
+        height: auto;
+    }
+    .f-app-icon .f-icons{
+        height: 43px;
+        width: 43px;
+    }
+    .f-app{
+        flex-basis: 100%;
+        margin-top: 40px;
+        border-bottom: 1px solid var(--gray-color);
+    }
+    .f-app input{
+        width: 40%;
+    }
+    .f-app:nth-child(2){
+        padding-bottom: 40px;
+    }
+    .f-app:last-child{
+        margin-bottom: 40px;
+        border: none;
+    }
+    .f-app .f-app-icon{
+        flex-basis: 30%;
+        padding: 0px 38%;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px) 
+{
+    .container{
+        width: 540px;
+    }
+    .navigationbar .social-media-icon{
+        display: none;
+    }
+    
+    .header-logo{
+        flex-basis: 20%;
+    }
+    .header-logo img{
+        max-width: 150px;
+    }
+    .header-call{
+        display: none;
+    }
+    .slider-bg .owl-carousel .owl-dots {
+        bottom: -15%;
+    }
+    .toggle-menu{
+        position: relative;
+    }
+    .header-menu{
+        position: absolute;
+        top: 30%;
+        width: 50%;
+        right: 6%;
+        background-color: white;
+        box-shadow: 0px 0px 10px black;
+        display: none;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+    .header-menu ul {
+        display: block;
+    }
+    .header-logo{
+        flex-basis: 90%;
+    }
+    .toggle-menu{
+        flex-basis: 10%;
+        margin: 0 auto;
+        display: block;
+    }
+    .toggle-menu i{
+        font-size: 26px; 
+        color: var(--primary-color);       
+    }
+    .vehicle-contain{
+        display: none;
+    }
+    .vehicle .owl-carousel .item img{
+        max-width: 100%;
+        display: block;
+    }
+    .vehicle .owl-carousel .owl-nav{
+        display: none;
+    }
+    .vehicle .owl-carousel .owl-dots{
+        display: none;
+    }
+    .app-con {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .app-con h5{
+        font-size: 12px;
+    }
+    .app-con h2{
+        font-size: 42px;
+    }
+    .app-con p{
+        font-size: 14px;
+    }
+    .android-btn{
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .android-btn .play-btn{
+        padding-top: 2px;
+        flex-basis: 30%;
+    }
+    .play-btn .app-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .android-btn .play-btn:last-child .app-icon i{
+        font-size: 26px;
+    }
+    .app-name h3{
+        font-size: 14px;
+    }
+    .app-view {
+        display: none;
+    }
+    .benefits-title h6{
+        font-size: 16px;
+    }
+    .benefits-title h2{
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+    .main-benefits{
+        height: 150vh;
+    }
+    .benefits{
+        display: block;
+    }
+    .line-1{
+        display: none;
+    }
+    .line-2{
+        display: none;
+    }
+    .line-3{
+        display: none;
+    }
+    .bene-taxi img{
+        opacity: 0.1;
+        max-width: 50%;
+        padding-top: 80px;
+    }
+    .benefits{
+        margin: 0 auto;
+        width: 80%;
+        top: 20%;
+    }
+    .benefits-point-right{
+        margin: 0 auto;
+        width: 80%;
+        top: 65%;
+        right: 0;
+    }
+    .benefits-con .benefits:nth-child(2){
+        top: 80%;
+        left: 5%;        
+    }
+    .benefits-con .benefits:nth-child(3){
+        top: 50%
+    }
+    .benefits-con .benefits-point-right:nth-child(5){
+        top: 35%;
+    }
+    .benefits-con .benefits-point-right:nth-child(6){
+        top: 95%;
+        right: 0;
+    }
+    .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .bene-offer-icon{
+        flex-basis: 12%;
+    }
+    .benefits-point-right .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .benefits-point-right .bene-offer-icon{
+        flex-basis: 12%;
+    }
+    .news-latter-bg{
+        height: auto;
+        padding: 20px;
+    }
+    .newu-latter{
+        padding: 0px ;
+    }
+    .news-name h4{
+        font-size: 14px;
+    }
+    .news-name h3{
+        font-size: 24px;
+    }
+    .news-name{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email input{
+        width: 50%;
+        padding: 20px;
+    }
+    .sub-btn{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .sub-btn input{
+        width: 30%;
+        padding: 15px 20px;
+    }
+    .driver-menu ul li{
+        margin: 0px 0px;
+    }
+    .driver-menu ul li a{
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+    .driver-profile-contain{
+        padding: 20px;
+    }
+    .driver-section .owl-carousel .owl-dots{
+        bottom: -10%;
+    }
+    .driver-skill{
+        padding: 30px 5px;
+        height: 85px;
+    }
+    .driver-skill .g-city{
+        flex-basis: 33.33%;
+    }                       
+    .stoks{
+        padding: 0px 8%;
+    }
+    .advert-contain{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .advert-img{
+        flex-basis: 100%;
+    }
+    .advert-img img{
+        width: 90%;
+    }
+    .advert-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+    }
+    .faq{
+        flex-basis: 100%;
+    }
+    .buy-your-taxi{
+        margin-top: 50px;
+        flex-basis: 48%;
+    }
+    .property-contain .pro-01{
+        margin: 20px auto;
+    }
+    .pro-cricle{
+        width: 230px;
+        height: 230px;
+    }
+    .test-title{
+        margin-bottom: 50px;
+    }
+    .test-title .t-con-1{
+        flex: 100%;
+    }
+    .test-contain .t-con-1 img{
+        top: -30%;
+        width: 70px;
+        height: 70px;
+        box-shadow: 0px 0px 10px var(--black-color);
+    }
+    .customer-des{
+        flex-basis: 100%;
+    }
+    .company-logo{
+        flex-basis: 100%;
+        text-align: center;
+    }                
+    .footer-section{
+        height: auto;
+    }
+    .f-app-icon .f-icons{
+        height: 43px;
+        width: 43px;
+    }
+    .f-app{
+        flex-basis: 100%;
+        margin-top: 40px;
+        border-bottom: 1px solid var(--gray-color);
+    }
+    .f-app input{
+        width: 40%;
+    }
+    .f-app:nth-child(2){
+        padding-bottom: 40px;
+    }
+    .f-app:last-child{
+        margin-bottom: 40px;
+        border: none;
+    }
+    .f-app .f-app-icon{
+        flex-basis: 30%;
+        padding: 0px 35%;
+    }
+}
+@media (max-width:575px)
+{
+    .container{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .navigationbar .social-media-icon{
+        display: none;
+    }
+    .header-logo{
+        flex-basis: 20%;
+    }
+    .header-logo img{
+        max-width: 150px;
+    }
+    .header-call{
+        display: none;
+    }
+    .slider-bg .owl-carousel .owl-dots {
+        bottom: -15%;
+    }
+    .toggle-menu{
+        position: relative;
+    }
+    .header-menu{
+        position: absolute;
+        top: 30%;
+        width: 50%;
+        right: 6%;
+        background-color: white;
+        box-shadow: 0px 0px 10px black;
+        display: none;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+    .header-menu ul {
+        display: block;
+    }
+    .header-logo{
+        flex-basis: 90%;
+    }
+    .toggle-menu{
+        flex-basis: 10%;
+        margin: 0 auto;
+        display: block;
+    }
+    .toggle-menu i{
+        font-size: 26px; 
+        color: var(--primary-color);       
+    }
+    .vehicle-contain{
+        display: none;
+    }
+    .vehicle .owl-carousel .item img{
+        max-width: 100%;
+        display: block;
+    }
+    .vehicle .owl-carousel .owl-nav{
+        display: none;
+    }
+    .vehicle .owl-carousel .owl-dots{
+        display: none;
+    }
+    .app-con {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .app-con h5{
+        font-size: 12px;
+    }
+    .app-con h2{
+        font-size: 42px;
+    }
+    .app-con p{
+        font-size: 14px;
+    }
+    .android-btn{
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .android-btn .play-btn{
+        padding-top: 2px;
+        flex-basis: 30%;
+    }
+    .play-btn .app-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .android-btn .play-btn:last-child .app-icon i{
+        font-size: 26px;
+    }
+    .app-name h3{
+        font-size: 14px;
+    }
+    .app-view {
+        display: none;
+    }
+    .benefits-title h6{
+        font-size: 16px;
+    }
+    .benefits-title h2{
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+    .main-benefits{
+        height: 150vh;
+    }
+    .benefits{
+        display: block;
+    }
+    .line-1{
+        display: none;
+    }
+    .line-2{
+        display: none;
+    }
+    .line-3{
+        display: none;
+    }
+    .bene-taxi img{
+        opacity: 0.1;
+        max-width: 50%;
+        padding-top: 80px;
+    }
+    .benefits{
+        margin: 0 auto;
+        width: 80%;
+        top: 20%;
+    }
+    .benefits-point-right{
+        margin: 0 auto;
+        width: 80%;
+        top: 65%;
+        right: 0;
+    }
+    .benefits-con .benefits:nth-child(2){
+        top: 80%;
+        left: 5%;        
+    }
+    .benefits-con .benefits:nth-child(3){
+        top: 50%
+    }
+    .benefits-con .benefits-point-right:nth-child(5){
+        top: 35%;
+    }
+    .benefits-con .benefits-point-right:nth-child(6){
+        top: 95%;
+        right: 0;
+    }
+    .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .bene-offer-icon{
+        flex-basis: 12%;
+    }
+    .benefits-point-right .bene-offer-con{
+        flex-basis: 80%;
+    }
+    .benefits-point-right .bene-offer-icon{
+        flex-basis: 12%;
+    }
+    .news-latter-bg{
+        height: auto;
+        padding: 20px;
+    }
+    .newu-latter{
+        padding: 0px ;
+    }
+    .news-name h4{
+        font-size: 14px;
+    }
+    .news-name h3{
+        font-size: 24px;
+    }
+    .news-name{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .news-email input{
+        width: 50%;
+        padding: 20px;
+    }
+    .sub-btn{
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .sub-btn input{
+        width: 30%;
+        padding: 15px 20px;
+    }
+    .driver-menu ul li{
+        margin: 0px 0px;
+    }
+    .driver-menu ul li a{
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+    .driver-profile-contain{
+        padding: 20px;
+    }
+    .driver-section .owl-carousel .owl-dots{
+        bottom: -10%;
+    }
+    .driver-skill{
+        padding: 30px 5px;
+        height: 85px;
+    }
+    .driver-skill .g-city{
+        flex-basis: 33.33%;
+    }                      
+    .stoks{
+        padding: 0px 8%;
+    }
+    .advert-contain{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .advert-img{
+        flex-basis: 100%;
+    }
+    .advert-img img{
+        width: 90%;
+    }
+    .advert-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+    }
+    .faq{
+        flex-basis: 100%;
+    }
+    .buy-your-taxi{
+        margin-top: 50px;
+        flex-basis: 48%;
+    }
+    .property-contain .pro-01{
+        margin: 20px auto;
+    }
+    .pro-cricle{
+        width: 230px;
+        height: 230px;
+    }
+    .test-title{
+        margin-bottom: 50px;
+    }
+    .test-title .t-con-1{
+        flex: 100%;
+    }
+    .test-contain .t-con-1 img{
+        top: -30%;
+        width: 70px;
+        height: 70px;
+        box-shadow: 0px 0px 10px var(--black-color);
+    }
+    .customer-des{
+        flex-basis: 100%;
+    }
+    .company-logo{
+        flex-basis: 100%;
+        text-align: center;
+    }                     
+    .footer-section{
+        height: auto;
+    }
+    .f-app-icon .f-icons{
+        height: 43px;
+        width: 43px;
+    }
+    .f-app{
+        flex-basis: 100%;
+        margin-top: 40px;
+        border-bottom: 1px solid var(--gray-color);
+    }
+    .f-app input{
+        width: 40%;
+    }
+    .f-app:nth-child(2){
+        padding-bottom: 40px;
+    }
+    .f-app:last-child{
+        margin-bottom: 40px;
+        border: none;
+    }
+    .f-app .f-app-icon{
+        flex-basis: 30%;
+        padding: 0px 35%;
+    }  
+}

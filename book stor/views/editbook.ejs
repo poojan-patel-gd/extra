@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/upadateBook/<%= id %>" method="post">
+        <h3>create Books</h3>
+        <input type="text" name="name" value="<%= name %>" placeholder="Book name">
+        <input type="number" name="price" value="<%= price %>" placeholder="price">
+        <input type="number" name="quantity" value="<%= quantity %>" placeholder="quantity">
+        <input type="text" name="description" value="<%= description %>" placeholder="description">
+        <select name="category">
+            <option>select</option>
+            <option <%= category === 'ActionandAdventure' ? "checked" : false %>Action and Adventure</option>
+            <option <%= category === 'Classics' ? "checked" : false %>Classics</option>
+            <option <%= category === 'Fantasy' ? "checked" : false %>Fantasy</option>
+        </select>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

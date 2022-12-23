@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Koh Lipe Shadow - Personal Use';
+    src: url('KohLipeShadowPersonalUse.woff2') format('woff2'),
+        url('KohLipeShadowPersonalUse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Koh Lipe - Personal Use';
+    src: url('KohLipePersonalUse.woff2') format('woff2'),
+        url('KohLipePersonalUse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Callinda DEMO';
+    src: url('CallindaDEMORegular.woff2') format('woff2'),
+        url('CallindaDEMORegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bassy';
+    src: url('BassyRegular.woff2') format('woff2'),
+        url('BassyRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edo SZ';
+    src: url('EdoSZ.woff2') format('woff2'),
+        url('EdoSZ.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

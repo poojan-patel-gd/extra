@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// colors
+@primary: #ffa101;
+@white-color: #fff;
+@black-color: #000;
+@font-color: #666a71;
+@fast: rgba(255, 161, 1, .3);
+@bg-color:#fbf3e4;
+@bold-font-color: #4f576a;
+@body: #fdfbf9;
+@check: #0cbe85;
+
+body{
+    overflow-x: hidden;
+    background-color: @body;
+}
+.align-items-center {
+    align-items: center;
+    justify-content: space-between;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+.tital {
+    font-size: 36px;
+    color: @black-color;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.py-100{
+    padding: 100px 0;
+}
+.container {
+    width: 1140px;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+// hrader
+header{
+    background-color: @bg-color;
+}
+header .petuk-main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+    .petuk-logo {
+        flex-basis: 20%;
+
+        img {
+            max-width: 50%;
+        }
+    }
+
+    nav {
+        align-items: center;
+        flex-basis: 60%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                list-style: none;
+                padding: 0 5px;
+                padding: 15px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: @primary;
+                }
+            }
+        }
+    }
+}
+
+.header-des {
+    flex-basis: 20%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .header-contact {
+        width: 60%;
+        border-right: 2px solid @primary;
+
+        span {
+            font-size: 16px;
+            color: @font-color;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: @primary;
+        }
+    }
+
+    .header-search {
+        width: 30%;
+        text-align: center;
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        i {
+            color: @font-color;
+            margin-top: 13px;
+            padding-right: 5px;
+        }
+    }
+}
+
+
+// pizza bg
+.slider{
+    background-color: @bg-color;
+}
+.pizaa-bg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.pizaa-bg::after{
+    background-image: url('../images/line.svg');
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 47%;
+}
+.pizz-con {
+    width: 50%;
+
+    .fast {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: @fast;
+        padding: 8px 8px 0;
+        font-size: 16px;
+        align-items: center;
+
+        i {
+            color: @primary;
+            padding-right: 10px;
+        }
+
+        h6 {
+            color: @font-color;
+        }
+    }
+
+    h1 {
+        font-size: 64px;
+        padding-top: 20px;
+
+        span {
+            color: @primary;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+
+    .apk-dow {
+        margin-top: 20px;
+
+        a {
+            text-decoration: none;
+            padding: 15px 25px;
+            display: inline-block;
+            background-color: @black-color;
+            color: @white-color;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: @primary;
+            }
+        }
+    }
+
+}
+.pizz-img {
+    width: 50%;
+}
+
+// pizza offer
+
+.pizza-of {
+    .tital{
+        text-align: center;
+    }
+    .row {
+        justify-content: space-between;
+
+        .card {
+            flex-basis: 23%;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                font-size: 25px;
+                color: @font-color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            span {
+                font-size: 20px;
+                color: @primary;
+                margin-bottom: 10px;
+            }
+
+            .quonty {
+                margin-bottom: 20px;
+                margin-top: 8px;
+
+                i {
+                    color: @font-color;
+                    border-radius: 50%;
+                    padding: 4px;
+                    border: 1px solid @primary;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: @white-color;
+                font-size: 18px;
+                padding: 10px 25px;
+                background-color: @primary;
+                transition: all 0.5s ease;
+                border-radius: 25px;
+                &:hover {
+                    background-color: @black-color;
+                }
+            }
+        }
+    }
+}
+
+// discount
+.discount{
+    .discount-baner{
+        width: 80%;
+        margin: 0 auto;
+        background-color: @bg-color;
+        padding: 15px 0;
+        justify-content: center;
+        display: flex;
+        border-radius: 15px;
+        border: 1px dashed @primary;
+        margin-bottom: 100px;
+        i{
+            font-size: 22px;
+            color: @primary;
+            padding-right: 5px;
+        }
+        h4{
+            font-size: 22px;
+            color: @primary;
+            padding-right: 5px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 23px;
+            color: @bold-font-color;
+            font-weight: 700;
+        }
+    }
+    .discount-card{
+        flex-basis: 49%;
+        width: 100%;
+        height: 350px;
+        background-color: @bg-color;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        border: 1px dashed @primary;
+        .discount-card-img{
+            img{
+                width: 80%;
+                position: absolute;
+                right: -70px;
+                top: -15%;
+            }
+        }
+        .discount-card-des{
+            position: absolute;
+            bottom: 15%;
+            padding: 0 15px;
+            h2{
+                font-size: 30px;
+                span{
+                    color: @primary;
+                    font-size: 30px;
+                }
+            }
+            span{
+                font-size: 16px;
+                color: @font-color;
+            }
+        }
+    }
+}
+
+// nearby pizza offer
+.nearby-pizza-offer{
+    .tital{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        h2{
+            flex-basis: 50%;
+            display: inline-block;
+        }
+        a{
+            flex-basis: 9%;
+            font-size: 16px;
+            display: inline-block;
+            text-align: right;
+            text-decoration: none;
+            color: @primary;
+            padding-right: 10px;
+            border-radius: 25px;
+            i{
+                margin-left: 10px;
+            }
+        }
+    }
+    .neatby-offer-card{
+        flex-basis: 23%;
+        overflow: hidden;
+        border-radius: 15px;
+        .neatby-offer-card-img{
+           img{
+               max-width: 100%;
+               display: block;
+           }
+        }
+        .neatby-offer-card-des{
+            background-color: @white-color;
+            padding: 10px 10px;
+            h4{
+                font-size: 22px;
+            }
+            span{
+                font-size: 13px;
+                color: @font-color;
+                padding-bottom: 15px;
+                display: block;
+            }
+            .reating{
+                span{
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        font-size: 16px;
+                        color: @black-color;
+                    }
+                    span{
+                        color: @primary;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Fresh Pizza Delivered
+.fresh-pizza-delivered{
+    text-align: center;
+    .fresh-pizza-delivered-card{
+        flex-basis: 33.33%;
+        background-color: @white-color;
+        padding: 30px 10px;
+        h4{
+            font-size: 25px;
+            padding: 15px 0;
+        }
+        p{
+            font-size: 16px;
+            color: @font-color;
+        }
+    }
+}
+
+// fastest delivery
+.fastest-delivery{
+    .fastest-delivery-img{
+        flex-basis: 50%;
+        img{
+            width: 100%;
+        }
+    }
+    .fastest-delivery-des{
+        flex-basis: 50%;
+        .fastest-delivery-con{
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            background-color: @white-color;
+            border-radius: 25px;
+            .fastest-delivery-des-icon{
+                i{
+                    font-size: 50px;
+                    color: @primary;
+                    margin-right: 15px;
+                }
+            }
+            .fastest-delivery-des-con{
+                h4{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 16px;
+                    color: @font-color;
+                }
+            }
+        }
+    }
+}
+
+// black
+.black{
+    background-color: @black-color;
+    padding: 50px 0;
+    .tital{
+        img{
+            position: absolute;
+            left: 82%;
+            max-width: 25%;
+        }
+        h2{
+            font-size: 30px;
+            color: @white-color;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 16px;
+            color: @white-color;
+            margin-bottom: 15px;
+        }
+        a{
+            font-size: 16px;
+            padding: 15px 25px;
+            background-color: @primary;
+            color: @white-color;
+            text-decoration: none;
+            margin-bottom: 15px;
+            transition: all 0.5s ease;
+            border-radius: 25px;
+            &:hover{
+                background-color: @font-color;
+            }
+        }
+    }
+}
+
+// we hate late
+.we-hate-late{
+    .tital{
+        h2{
+            text-align: left;
+        }
+    }
+    .we-hate-late-des{
+        flex-basis: 50%;
+        p{
+            width: 70%;
+            padding: 12px 0;
+            font-size: 15px;
+            color: @font-color;
+        }
+        .point{
+            display: flex;
+            padding: 10px 0;
+            span{
+                color: @check;
+                padding-right: 10px;
+            }
+            p{
+                padding: 0;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// Latest News
+.latest-news{
+    background-color: @bg-color;
+    a{
+        i{
+            color: @white-color;
+            padding-right: 5px;
+        }
+        padding: 10px 25px;
+        background-color: @primary;
+        color: @white-color;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 25px;
+        transition: all 0.5s ease;
+        &:hover{
+            background-color: @font-color;
+        }
+    }
+    .news-card{
+        position: relative;
+        flex-basis: 23%;
+        border-radius: 15px;
+        overflow: hidden;
+        .news-card-img{
+            img{
+                width: 100%;
+            }
+        }
+        .news-card-des{
+            position: absolute;
+            bottom: 5%;
+            padding: 20px;
+            .news-card-des-name{
+                display: flex;
+                padding: 20px 0;
+                img{
+                    max-width: 20px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+                span{
+                    font-size: 16px;
+                    color: @white-color;
+                }
+            }
+            h4{
+                font-size: 18px;
+                color: @white-color;
+                padding-bottom: 8px;
+            }
+            a{
+                color: @white-color;
+                padding: 3px 15px;
+                border-radius: 25px;
+                background-color: transparent;
+                border: 1px solid @white-color;
+                text-decoration: none;
+                font-size: 14px;
+                transition: all 0.5s ease;
+                &:hover{
+                    background-color: @primary;
+                    border: 1px solid @primary;
+                    
+                }
+            }
+        }
+    }
+}
+
+// Join as Partner
+.join-as-partner{
+    .join-as-partner-card{
+        text-align: center;
+        flex-basis: 48%;
+        position: relative;
+        background-color: @white-color;
+        padding: 50px;
+        border-radius: 15px;
+        .card-icon{
+            position: absolute;
+            left: 50%;
+            top: -25%;
+            transform: translate(-50%);
+            i{
+                font-size: 50px;
+                padding: 30px;
+                border-radius: 50%;
+                background-color: @white-color;
+                color: @primary;
+            }
+        }
+        h4{
+            font-size: 30px;
+            padding: 20px;
+        }
+        p{
+            width: 80%;
+            margin: 0 auto;
+        }
+        a{
+            padding: 10px 25px;
+            background-color: @primary;
+            text-decoration: none;
+            color: @white-color;
+            border-radius: 25px;
+            margin-top: 30px;
+            display: inline-block;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// brand
+.brand{
+    .brand-logo{
+        display: flex;
+        width: 100%;
+        .brand-icon{
+            flex-basis: 23%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Subscribe For Pizza Offer
+.subscribe{
+    .subscribe-card{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        background-color: @bg-color;
+        border: 1px dashed @primary;
+        padding: 50px;
+        border-radius: 25px;
+        .subscribe-des{
+            padding: 50px;
+            h4{
+                font-size: 40px;
+                padding-bottom: 25px;
+            }
+            p{
+                font-size: 16px;
+                color: @font-color;
+            }
+            .subscribe-btn{
+                margin-top: 20px;
+                input{
+                    width: 40%;
+                    height: 50px;
+                    border: 1px solid @primary;
+                }
+                a{
+                    padding: 16px 25px;
+                    background-color: @primary;
+                    text-decoration: none;
+                    display: inline-block;
+                    color: @white-color;
+                    transition: all 0.5s ease;
+                    &:hover{
+                        background-color: @font-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer{
+    background-color: @white-color;
+}

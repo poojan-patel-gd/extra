@@ -1,0 +1,62 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: #fff;
+    margin: top bottom 25px ;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #AEB6BF;
+    background-image: url('../images/erth.jpg');
+    background-size: cover;
+    /* background-repeat: repeat-x; */
+}
+p{
+    font-size: 20px;
+    color: #fff;
+    line-height: 22px;
+    text-indent: 80px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    font-size: 20px;
+    color: #fff;
+    line-height: 22px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+.box{
+    width: 450px;
+    height: 250px;
+    margin: 20px auto;
+    border: 5px solid #212121 ;
+    background-color: #FADBD8 ;
+    background-image: url('../images/german_shepherd.jpg');
+    background-size: 100%;
+}
+.box2{
+    width: 450px;
+    height: 250px;
+    margin: 20px auto;
+    border: 5px solid #212121 ;
+    background-color: #FADBD8 ;
+    background-image: url('../images/labrador.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.box3{
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    background-color: #FADBD8 ;
+    background-image: url('../images/human_love.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}

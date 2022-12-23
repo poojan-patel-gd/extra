@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    justify-content: center;
+}
+ul{
+    position: relative;
+    display: flex;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 50px;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 100px;
+    color: rgb(32, 32, 32);
+}
+ul li::before{
+    font-family: fontawesomex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-out;
+}
+ul li:nth-child(1)::before{
+    content: '\f39e';
+    color: #1da1f2;
+    border-bottom: 4px solid #1da1f2;
+}
+ul li:hover::before{
+    height: 100%;
+}

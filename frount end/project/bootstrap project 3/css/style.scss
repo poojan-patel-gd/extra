@@ -1,0 +1,934 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// color
+$white: #fff;
+$black: #000;
+$primary-color: #fa5b0f;
+$big-font-color: #555;
+$small-font-color: #666;
+$background-color: #efefef;
+$footer-bg-color: #111;
+
+.container{
+    width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+body{
+    overflow-x: hidden;
+    cursor: none;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-item-center{
+    align-items: center;
+}
+
+// cursor pointer
+.cursor {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+}
+    .cursor2 {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        opacity: .3;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 1000;
+    }
+    .hover {
+        background-color: $small-font-color;
+        opacity: 0.5;
+    }
+
+// btn
+.btn{
+    position: relative;
+    a{
+        padding: 15px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: $white;
+        background-color: $primary-color;
+        i{
+            position: absolute;
+            font-size: 15px;
+            color: $white;
+            right: 31px;
+            z-index: 1;
+            // top: 0;
+            line-height: 25px;
+            transition: all 0.2s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    span{
+        position: relative;
+        padding: 0;
+        display: inline-block;
+        transition: all 0.5s;
+    }
+    &:hover span{
+        transform: translateX(-10px);
+    }
+    &:hover i{
+        right: 28px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// title
+.title{
+    padding-bottom: 50px;
+    text-align: center;
+    h1{
+        font-size: 48px;
+        padding: 15px 0;
+        font-weight: 700;
+        color: $primary-color;
+        span{
+            color: $big-font-color;
+            padding: 0 8px;
+        }
+    }
+    h4{
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Raleway';
+        color: $big-font-color;
+    }
+    span:nth-child(3){
+        width: 300px;
+        height: 0.5px;
+        display: inline-block;
+        margin-bottom: 7px;
+        background-color: $big-font-color;
+    }
+     span:nth-child(5){
+        width: 300px;
+        height: 0.5px;
+        display: inline-block;
+        margin-bottom: 7px;
+        background-color: $big-font-color;
+    }
+}
+
+// about us
+.about-us{
+    .we-are-salimo-con{
+        p{
+            color: $small-font-color;
+        }
+        .we-are-salimo-con-category{
+            ul{
+                padding: 0;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+    .we-are-salimo-img{
+        border: 2px solid $primary-color;
+        position: relative;
+        border-radius: 5px;
+        img{
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            border-radius: 5px;
+        }
+    }
+}
+
+// project manager
+.project-manager{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/projectmanager-bg.jpg');
+    background-size: cover;
+    .project-manager-img{
+        img{
+            border-radius: 50%;
+            border: 13px solid $primary-color; 
+        }
+    }
+    .project-manager-con{
+        h4{
+            font-size: 48px;
+            color: $white;
+            padding-bottom: 20px;
+        }
+        h3{
+            font-size: 30px;
+            color: $primary-color;
+        }
+        p:nth-child(3){
+            font-size: 14px;
+            font-family: 'Raleway';
+            color: $white;
+            letter-spacing: 1px;
+            padding-top: 30px;
+        }
+        p:nth-child(4){
+            font-size: 14px;
+            font-family: 'Raleway';
+            color: $white;
+            letter-spacing: 1px;
+            border-left: 5px solid $primary-color;
+            padding-left: 15px;
+        }
+        .project-manager-social-icon{
+            ul{
+                padding: 0;
+                li{
+                    list-style: none;
+                    width: 63px;
+                    height: 63px;
+                    border: 3px solid $primary-color;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 57px;
+                    margin: 0 7px;
+                    a{
+                        font-size: 30px;
+                        color: $primary-color;
+                        i{
+                            transition: all 0.5s;
+                        }
+                    }
+                    &:hover a{
+                        color: $white;
+                    }
+                    &:hover i{
+                        transform: rotateY(360deg);
+                    }
+                    &:hover{
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// our services
+.our-services{
+    background-color: $background-color;
+    .services-card{
+        // background-color: $white;
+        text-align: center;
+        // overflow: hidden;
+        perspective: 1000px;
+        width: 370px;
+        height: 217px;
+        margin-bottom: 10px;
+        position: relative;
+        border-radius: 10px;
+        .services-card-frunt{
+            backface-visibility: hidden;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            // top: 50%;
+        border-radius: 10px;
+
+            // left: 50%;
+            background-color: $white;
+            transform: rotateY(180deg), translate(-50%,-50%);
+            transition: all 0.5s;
+            i{
+                font-size: 40px;
+                color: $primary-color;
+            }
+            h4{
+                font-size: 20px;
+                padding-top: 15px;
+                color: $primary-color;
+            }
+            .cc{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .services-card-back{
+            backface-visibility: hidden;
+            z-index: 2;
+            text-align: start;
+            position: absolute;
+        border-radius: 10px;
+            
+            content: '';
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 100%;
+            background-color: $white;
+            padding: 15px 20px;
+            transform: rotateY(180deg);
+            transition: all 0.5s;
+            i{
+                position: absolute;
+                top: -40%;
+                right: -10%;
+                font-size: 228px;
+                z-index: 1;
+                color: $primary-color;
+                opacity: 0.2;
+            }
+            h4{
+                font-size: 16px;
+                color: $primary-color;
+                padding: 8px 0;
+            }
+            p{
+                font-size: 13px;
+                font-family: 'Raleway';
+                color: $small-font-color;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+        &.services-card:hover .services-card-frunt{
+            transform: rotateY(-180deg);
+        }
+        &.services-card:hover .services-card-back{
+            transform: rotateY(0deg);
+        }
+    }
+}
+
+// happy customers
+.happy-customers{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/testimonials-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    .title{
+        h1{
+            span{
+                color: $white;
+            }
+        }
+        h4{
+            color: $white;
+        }
+    }
+    .carousel{
+        text-align: center;
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    max-width: 124px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    border: 7px solid $white;
+                    margin-bottom: 25px;
+                }
+                p{
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                    color: $white;
+                }
+                h4{
+                    font-size: 20px;
+                    color: $primary-color;
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                }
+                span{
+                    font-size: 16px;
+                    color: $white;
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+// our portfolio
+.our-portfolio{
+    .our-portfolio-all-projects{
+        ul{
+            padding: 0;
+            justify-content: center;
+            .active{
+                background-color: $primary-color;
+                border-radius: 25px;
+                a{
+                    color: $white;
+                }
+            }
+            li{
+                list-style: none;
+                padding: 0 7px;
+                a{
+                    color: $black;
+                    padding: 10px 25px;
+                    border: 1px solid $primary-color;
+                    border-radius: 25px;
+                    transition: all 0.3s;
+                    display: inline-block;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: $primary-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .our-portfolio-card{
+        .our-portfolio-card-line{
+            padding: 7px;
+            .card{
+                img{
+                    border-radius: 0.25rem;
+                }
+                .card-body{
+                    h5{
+                        border-left: 3px solid $primary-color;
+                        padding-left: 8px;
+                        font-family: 'Raleway';
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $big-font-color;
+                    }
+                    p{
+                        font-size: 15px;
+                        font-family: 'Raleway';
+                        font-weight: 400;
+                        color: $small-font-color;
+                    }
+                }
+            }
+            .card-icon-bg{
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                .card-icon{
+                    width: 100%;
+                    height: 70%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s;
+                    i{
+                    position: absolute;
+                    top: 50%;
+                    z-index: 12;
+                    color: $white;
+                    font-size: 20px;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    }
+                   
+                }
+                &:hover .card-icon{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// cool facts
+.cool-facts{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/facts-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .title{
+        h1{
+            span{
+                color: $white;
+            }
+        }
+        h4{
+            color: $white;
+        }
+    }
+    .col-3{
+        i{
+            font-size: 90px;
+            color: $white;
+        }
+        .counter{
+            font-size: 50px;
+            font-family: 'Raleway';
+            font-weight: 800;
+            color: $primary-color;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '+';
+                top: 50%;
+                right: 20%;
+                transform: translate(-50% , -50%);
+                font-size: 62px;
+                font-weight: 900;
+                color:$primary-color;
+            }
+        }
+        span{
+            font-size: 18px;
+            color: $white;
+        }
+    }
+}
+
+// our team
+.our-team{
+    background-color: $background-color;
+    .card{
+        padding: 0;
+        margin: 0 6px;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        .card-img{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            position: relative;
+            img{
+                display: block;
+            }
+            .our-team-card-social-icon{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 5;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s;
+                .our-team-card-social-icon-2{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                i{
+                    width: 40px;
+                    height: 40px;
+                    border: 2px solid $primary-color;
+                    border-radius: 50%;
+                    line-height: 38px;
+                    color: #fa5b0f;
+                    transition: all 0.5s;
+                    &:hover{
+                        transform: rotateY(360deg);
+                    }
+                }
+
+            }
+        }
+    
+        .card-body{
+            border-top: 3px solid $primary-color;
+            .card-body-con{
+                width: 100%;
+                height: 23%;
+                background-color: $primary-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 5;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s;
+                h5{
+                    margin-top: 27px;
+                    font-size: 18px;
+                    color: $white;
+                }
+                p{
+                    font-size: 14px;
+                    color: $white;
+                }
+            }
+            h5{
+                // margin-top: 25px;
+                font-size: 18px;
+                color: $big-font-color;
+            }
+            p{
+                font-size: 14px;
+                color: $small-font-color;
+            }
+        }
+        &:hover .card-body-con{
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover .our-team-card-social-icon{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// our newsletter
+.our-newsletter{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/testimonials-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .title{
+        h1{
+            span{
+                color: $white;
+            }
+        }
+        h4{
+            color: $white;
+        }
+    }
+    .col-12{
+        p{
+            font-size: 14px;
+            color: $white;
+            padding-bottom: 10px;
+            font-family: 'Raleway';
+            font-weight: 600;
+        }
+        .input-group{
+            border-radius: 30px;
+            margin-left: 12px;
+            background-color:$primary-color;
+            width: 65%;
+            span{
+                background-color:$primary-color;
+                height: 50px;
+                border-radius: 30px 0px 0px 30px;
+                padding:0px 10px 0px 20px;
+                border: none;
+                color: $white;
+            }
+            .form-control{
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                border: none;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+// blog posts
+.blog-posts{
+    .blog-posts-card-line{
+        .card{
+            .card-img{
+                overflow: hidden;
+                img{
+                    transform: scale(1);
+                    transition: all 0.5s;
+                }
+                &:hover img{
+                    transform: scale(1.1);
+                }
+                .blog-posts-date{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    width: 40px;
+                    height: 50px;
+                    background-color: $primary-color;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin: 0; 
+                    h4{
+                        font-size: 16px;
+                        font-weight: 800;
+                        color: $white;
+                        font-family: 'Raleway';
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 800;
+                        color: $white;
+                        font-family: 'Raleway';
+                    }
+                }
+            }
+            .card-body{
+                h5{
+                    font-size: 18px;
+                    color: $big-font-color;
+                    font-family: 'Raleway';
+                    font-weight: 800;
+                }
+                p{
+                    font-size: 14px;
+                    color: $small-font-color;
+                }
+            } 
+        }
+    }
+}
+
+// video promo
+.video-promo{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/video-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    .title{
+        h1{
+            span{
+                color: $white;
+            }
+        }
+        h4{
+            color: $white;
+        }
+    }
+    p{
+        font-size: 14px;
+        font-family: 'Raleway';
+        font-weight: 800;
+        color: $white;
+        padding-bottom: 50px;
+    }
+    a{
+        font-size: 30px;
+        width: 80px;
+        height: 80px;
+        border: 4px solid $primary-color;
+        border-radius: 50%;
+        line-height: 70px;
+        color: $primary-color;
+        margin: 0 auto;
+        transition: all 0.3s ease-in;
+        &:hover{
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+}
+
+// contact us
+.contact-us{
+    background-color: $background-color;
+    .map{
+        position: relative;
+        .map-con{
+            .map-card{
+                border-radius: 5px;
+                position: absolute;
+                bottom: -10%;
+                left: 13%;
+                background-color: $white;
+                padding: 10px 20px;
+                .map-card-con{
+                    h4{
+                        font-size: 17px;
+                        font-family: 'Raleway';
+                        font-weight: 800;
+                        color: $primary-color;
+                    }
+                    span{
+                        font-size: 13px;
+                        color: $small-font-color;
+                        
+                    }
+                }
+                .map-card-icon{
+                    text-align: center;
+                    i{
+                        font-size: 70px;
+                        color: $primary-color;
+                    }
+                }
+            }
+            .map-card-2{
+                border-radius: 5px;
+                position: absolute;
+                bottom: -10%;
+                right: 13%;
+                background-color: $white;
+                padding: 10px 20px;
+                .map-card-con{
+                    h4{
+                        font-size: 17px;
+                        font-family: 'Raleway';
+                        font-weight: 800;
+                        color: $primary-color;
+                    }
+                    span{
+                        font-size: 13px;
+                        color: $small-font-color;
+
+                    }
+                }
+                .map-card-icon{
+                    text-align: center;
+                    i{
+                        font-size: 70px;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// send us an email
+.send-us-an-email{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/contactform-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .title{
+        h1{
+            span{
+                color: $white;
+            }
+        }
+        h4{
+            color: $white;
+        }
+    }
+    .name{
+        .col-6{
+            .input-group{
+                // width: 50%;
+                border-radius: 30px;
+                margin-left: 12px;
+                background-color:$primary-color;
+                span{
+                    background-color:$primary-color;
+                    height: 50px;
+                    border-radius: 30px 0px 0px 30px;
+                    padding:0px 10px 0px 20px;
+                    border: none;
+                    color: $white;
+                }
+                .form-control{
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    border: none;
+                    padding-left: 20px;
+                }
+            }
+            .btn{
+                // width: 150%;
+                a{
+                    padding: 10px 68px;
+                }
+            }
+        }
+    }
+    .message{
+        width: 100%;
+        textarea{
+            border-radius: 5px;
+            padding: 15px;
+        }
+    }
+}
+
+// brand
+.brand{
+    marquee{
+        img{
+            padding: 50px 50px;
+        }
+    }
+}
+
+// footer
+footer{
+    background-color: $footer-bg-color;
+    h4{
+        font-size: 14px;
+        color: $white;
+        font-family: 'Raleway';
+        padding-bottom: 15px;
+    }
+    span{
+        font-size: 14px;
+        color: $white;
+        font-family: 'Raleway';
+        padding-bottom: 15px;
+    }
+    .footer-social-icon{
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                width: 50px;
+                height: 50px;
+                border: 3px solid $primary-color;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 46px;
+                margin: 0 7px;
+                a{
+                    font-size: 20px;
+                    color: $primary-color;
+                    i{
+                        transition: all 0.5s;
+                    }
+                }
+                &:hover a{
+                    color: $white;
+                }
+                &:hover i{
+                    transform: rotateY(360deg);
+                }
+                &:hover{
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}

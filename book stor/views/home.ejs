@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    input{
+        margin-top: 5px;
+    }
+    
+    select{
+        margin-top: 5px;
+    }
+    
+    button{
+        margin-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <form action="/createBook" method="post">
+        <h3>Book info</h3>
+        <input type="text" name="name" placeholder="Book name"><br>
+        <input type="number" name="price" placeholder="price"><br>
+        <input type="number" name="quantity" placeholder="quantity"><br>
+        <input type="text" name="description" placeholder="description"><br>
+        <select name="category"><br>
+            <option value="select">select</option>
+            <option value="Adventure">Action and Adventure</option>
+            <option value="Horror">Classics</option>
+            <option value="Biographi">Fantasy</option>
+        </select><br>
+        <button type="submit">submit</button>
+    </form>
+
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tbody>
+            <% Bookdata.forEach((i) => { %>
+                <tr>
+                    <td><%= i.name %></td>
+                    <td><%= i.price %></td>
+                    <td><a href="/addquantity/<%= i._id %>">+</a><%= i.quantity %><a href="/minquantity/<%= i._id %>">-</a></td>
+                    <td><%= i.description %></td>
+                    <td><%= i.category %></td>
+                    <td><a href="/editbook/<%= i._id %>">Edit</a></td>
+                    <td><a href="/deletebook/<%= i._id %>">Delete</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

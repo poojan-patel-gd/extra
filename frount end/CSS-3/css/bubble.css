@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.bubble{
+    background-image: url('../images/bubble.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.bubble::after{
+    position: absolute;
+    content: '';
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+}
+.bubble span{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7),
+         inset 0px 20px 30px 5px rgba(106, 142, 177, 0.5);
+    animation: bubble 3s linear infinite , side 3s linear infinite;
+    overflow: hidden; 
+    z-index: 2;
+}
+.inside{
+    width: 10px;
+    height: 7px;
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 30px 10px 2px white;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 38px;
+    transform: rotate(-40deg);
+}
+.bubble span:nth-child(2){
+    top: 20%;
+    left: 20%;
+    transform: scale(1.1);
+    animation: bubble 13s linear infinite , side 10s linear infinite ;
+}
+.bubble span:nth-child(3){
+    top: 30%;
+    left: 35%;
+    transform: scale(0.8);
+    animation: bubble 7s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(4){
+    top: 70%;
+    left: 20%;
+    transform: scale(0.5);
+    animation: bubble 5s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(5){
+    top: 20%;
+    left: 70%;
+    transform: scale(1.2);
+    animation: bubble 18s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(6){
+    top: 50%;
+    left: 5%;
+    transform: scale(1.4);
+    animation: bubble 25s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(7){
+    top: 5%;
+    left: 50%;
+    transform: scale(1.3);
+    animation: bubble 22s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(8){
+    top: 75%;
+    left: 10%;
+    transform: scale(1.2);
+    animation: bubble 15s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(9){
+    top: 60%;
+    left: 30%;
+    transform: scale(1.1);
+    animation: bubble 13s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(10){
+    top: 60%;
+    left: 90%;
+    transform: scale(0.9);
+    animation: bubble 9s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(11){
+    top: 20%;
+    left:92%;
+    transform: scale(1.4);
+    animation: bubble 25s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(12){
+    top: 50%;
+    left: 50%;
+    transform: scale(1);
+    animation: bubble 10s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(13){
+    top: 55%;
+    left: 65%;
+    transform: scale(1.5);
+    animation: bubble 28s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(14){
+    top: 85%;
+    left: 40%;
+    transform: scale(1);
+    animation: bubble 10s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(15){
+    top: 80%;
+    left: 60%;
+    transform: scale(0.8);
+    animation: bubble 7s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(16){
+    top: 2%;
+    left: 80%;
+    transform: scale(0.3);
+    animation: bubble 3s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(17){
+    top: 80%;
+    left: 85%;
+    transform: scale(0.7);
+    animation: bubble 6s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(18){
+    top: 80%;
+    left: 25%;
+    transform: scale(1.2);
+    animation: bubble 14s linear infinite , side 10s linear infinite;
+}
+.bubble span:nth-child(19){
+    top: 30%;
+    left: 2%;
+    transform: scale(0.5);
+    animation: bubble 3s linear infinite , side 15s linear infinite;
+}
+.bubble span:nth-child(20){
+    top: 2%;
+    left: 30%;
+    transform: scale(1);
+    animation: bubble 14s linear infinite , side 10s linear infinite;
+}
+
+
+.fish h1{
+    display: inline-block;
+    position: absolute;
+    top: 65%;
+    left: 0;
+    animation: fish 10s linear infinite;
+    z-index: 1;
+}
+h1 img{
+    max-width: 70px;
+}
+.fish h1:nth-child(2){
+    top: 75%;
+    left: 3%;
+}
+.fish h1:nth-child(3){
+    top: 85%;
+    left: 0%;
+}
+
+.fish h2{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+    animation: fish-2 15s linear infinite;
+}
+.fish h2 img{
+    max-width: 100px;
+}
+.fish h2:last-child{
+    top: 15%;
+    right: 1%;
+}
+
+
+
+@keyframes bubble {
+    
+    0%{
+        margin-top: 1000px;
+    }
+    100%{
+        margin-top: -100%;
+    }
+}
+
+@keyframes side {
+    0%{
+        margin-left: 0px;
+    }
+    40%{
+        margin-left: 100px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}

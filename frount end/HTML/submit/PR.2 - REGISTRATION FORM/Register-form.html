@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Register-form</title>
+	</head>
+	<body>
+			<h1 align="center">Register</h1>
+			<hr/>
+			<hr/>
+			<form method="get" action="">
+				<b>Name*:-</b>
+					<input type="text" name="fname" placeholder="First name..." required></input>
+					<input type="text" name="lname" placeholder="Last name..." required></input>
+					<hr/>
+				<b>Phone:-</b>
+					<select name="Phone Number">
+						<option>+91</option>
+						<option>+92</option>
+					</select>
+					<input type="number" name="Phone"></input>
+					<hr/>
+				<b>Email*:-</b>
+					<input type="email" name="Email" placeholder="example@gmail.com" required></input>
+					<hr/>
+				<b>Address*:-</b>
+					<textarea name="address" required></textarea>
+					<hr/>
+				<b>Gender:-</b>
+					<label>
+					<input type="radio" name="gender" value="male"></input> Male
+					</label>
+					<label>
+					<input type="radio" name="gender" value="female"></input> Female
+					</label>
+					<label>
+					<input type="radio" name="gender" value="other"></input> Other
+					</label>
+					<hr/>
+				<b>Profile Photo:-</b>
+					<input type="file" name="photo"></input>
+					<hr/>
+				<b>Birthday:-</b>
+					<input type="Date" name="Date">
+					<hr/>
+				<b>Hobby:-</b>
+					<br/>
+					<label>
+					<input type="checkbox" name="Cricket">Cricket</input>
+					</label>
+					<br/>
+					<label>
+					<input type="checkbox" name="Traveling">Traveling</input>
+					</label>
+					<br/>
+					<label>
+					<input type="checkbox" name="Reading">Reading</input>
+					</label>
+					<br/>
+					<label>
+					<input type="checkbox" name="Music">Music</input>
+					</label>
+					<hr/>
+					<hr/>
+				<h3 align="center">Login Details</h3>
+				<hr/>
+				<hr/>
+				<b>User Name*:-</b>
+					<input type="text" name="uname" required></input>
+					<hr/>
+				<b>Password*:-<b/>
+					<input type="password" name="password" required></input>
+					<hr/>
+				<b>Confirm Password*:-<b/>
+					<input type="password" name="password" required></input>
+					<hr/>
+					<hr/>
+					<input type="submit" name="SUBMIT"></input>
+					<input type="reset" name="RESET"></input>
+			</form>
+	</body>
+</html>

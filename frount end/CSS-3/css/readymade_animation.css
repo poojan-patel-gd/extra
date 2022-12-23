@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+.round{
+    width: 150px;
+    height: 150px;
+    background-color: darkgray;
+    margin: 20px auto;
+    animation-iteration-count: infinite;
+}

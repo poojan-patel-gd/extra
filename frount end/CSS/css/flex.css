@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2{
+    text-align: center;
+    font-family: 'Poppins';
+    margin: 10px;
+}
+.contener{
+    width: 1140px;
+    height: 500px;
+    background-color: #212121;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: cornflowerblue;
+    margin: 5px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 21;
+}
+.flex_wrap{
+        flex-wrap: wrap;
+}
+.flex_no_wrap{
+        flex-wrap: nowrap;
+}
+.flex_wrap_reverse{
+        flex-wrap: wrap-reverse;
+}
+.flex_direction_row{
+        flex-direction:row ;
+}
+.flex_direction_row_reverse{
+        flex-direction:row-reverse ;
+}
+.flex_direction_column{
+        flex-direction:column ;
+}
+.flex_direction_column_reverse{
+        flex-direction:column-reverse ;
+}
+.box1{
+        width: 200px;
+        height: 100px;
+        background-color: deeppink;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 21px;
+}
+.flex_justify_start{
+        justify-content: start;
+}
+.flex_justify_center{
+        justify-content: center;
+}
+.flex_justify_end{
+        justify-content: end;
+}
+.flex_justify_space_between{
+        justify-content: space-between;
+}
+.flex_justify_space_around{
+        justify-content: space-around;
+}
+.flex_justify_space_evenly{
+        justify-content: space-evenly;
+}
+.flex_align_items_start{
+        align-items: flex-start;
+}
+.flex_align_items_center{
+        align-items: center;
+}
+.flex_align_items_end{
+        align-items: flex-end;
+}
+.box2{
+        width: 200px;
+        background-color: palegreen;
+        margin: 5px;
+        text-align: center;
+        font-size: 21px;
+}
+.flex_align_items_stretch{
+        align-items: stretch;
+}
+.flex_align_items_baseline{
+        align-items: baseline;
+}
+.box3{
+        width: 200px;
+        height: 100px;
+        background-color: tomato;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 21px;
+}
+.flex_align_content_start{
+        align-content: flex-start;
+}
+.flex_align_content_center{
+        align-content: center;
+}
+.flex_align_content_end{
+        align-content: flex-end;
+}
+.flex_align_content_between{
+        align-content: space-between;
+}
+.flex_align_content_around{
+        align-content: space-around;
+}
+.flex_align_content_evenly{
+        align-content: space-evenly;
+}
+.flex_align_self_start{
+        align-self: flex-start;
+}
+.flex_align_self_center{
+        align-self: center;
+}
+.flex_align_self_end{
+        align-self: flex-end;
+}
+.box4{
+        flex-basis: 10%;
+        height: 100px;
+        background-color: darkmagenta;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 31px;
+}
+.order_first{
+        order: -1;
+}
+.order_1{
+        order: 1;
+}
+.order_2{
+        order: 2;
+}
+.order_3{
+        order: 3;
+}
+.order_4{
+        order: 4;
+}
+.order_5{
+        order: 5;
+}
+.order_6{
+        order: 6;
+}
+.order_7{
+        order: 7;
+}
+.order_8{
+        order: 8;
+}
+.order_end{
+        order: 99;
+}
+.box5{
+        flex-basis: 100px;
+        height: 100px;
+        background-color: darkmagenta;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 31px;
+        flex-grow:0;        
+}
+.box6{
+        flex-basis: 8%;
+        height: 100px;
+        background-color: darkmagenta;
+        margin: 5px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 31px;
+        flex-shrink:0;
+}

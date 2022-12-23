@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightslategray;
+}
+.bg{
+    width: 100%;
+    height: auto;
+    background-color: ghostwhite;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.contener{
+    width: 1140px;
+    height: 500px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.align-items-center{
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: center;
+}
+.about_content{
+    flex-basis: 50%;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.about_content h1::before{
+    width:30%;
+    height:3px;
+    position: absolute;
+    content: '';
+    background-image: url('../images/bg_style_title.webp');
+    top: 17px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.about_content i{
+    font-size: 24px;
+    color: #ca0808;
+    transform: rotate(-45deg);
+    margin-bottom:30px ;
+}
+.about_img1{
+    flex-basis: 25%;
+    display: flex;
+}
+.about_img2{
+    flex-basis: 25%;
+}
+h1{
+    font-size: 30px;
+    font-family: 'Graviola Soft';
+    margin-bottom: 30PX;
+}
+.about_content span{
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.about_content p{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.about_content a{
+    text-decoration: none;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
+.box1{
+    width: 270px;
+    height: 431px;
+    background-image: url('../images/box1.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    margin-right: 7px;
+}
+.box2{
+    width: 270px;
+    height: 431px;
+    background-image: url('../images/box2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    margin-left: 7px;
+}
+.box1_1{
+    width:100%;
+    height:150px;
+    background-color:rgb(255, 255, 0, 0.9);
+    position: absolute;
+    bottom:0%;
+    text-align: center;
+    padding-top: 50px;
+}
+.box2_2{
+    width:100%;
+    height:150px;
+    background-color:rgb(255, 85, 51, 0.9);
+    position: absolute;
+    text-align: center;
+    padding-top: 50px;
+}
